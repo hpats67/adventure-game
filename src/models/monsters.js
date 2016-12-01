@@ -10,7 +10,7 @@ monsters.compendium = [
   {
     name: 'Black Paladin',
     description: 'A still suit of matte black armor holding a two-handed sword that seems to absorb all the light in the room. Though you can\'t see any eyes through the visor slits you can tell you are being watched by someone with cat-like reflexes and a desire to do harm to others.',
-    weakness: '',
+    weakness: 'salt shaker',
     attack: 25
   },
   {
@@ -29,7 +29,37 @@ monsters.compendium = [
     name: 'Wicked Witch of the NW',
     description: 'A generic, sterotypical green-skinned witch in black robes, pointy hat and a wart with three coarse hairs growing out of it.',
     weakness: 'bucket of stagnant water',
-    attack: 45
+    attack: 15
+  },
+  {
+    name: 'Ham-fisted Ham Hock',
+    description: 'A large hog that stands on two legs. It has an eye patch, coarse hairs growing out of everywhere, a diamond codpiece and boxing gloves.',
+    weakness: 'meat tenderizer',
+    attack: 15
+  },
+  {
+    name: 'Alice',
+    description: 'A little black girl wearing a frilly white dress, blonde curls festooned with blue ribbons and eyes that always look in different directions. Around her neck hangs a dyslexic sign that says, "Have you seen my bunny?"',
+    weakness: 'caterpillar charm',
+    attack: 15
+  },
+  {
+    name: 'The Dead One',
+    description: 'A rough human outline floats in the room. The longer you stare at it, the more disturbed you become as it seems to subtlely change height and width into the familiar outline of a loved one. Be wary.',
+    weakness: 'tattered tintype',
+    attack: 25
+  },
+  {
+    name: 'Megilla Gorilla',
+    description: 'A 8 foot tall gorilla with a monocle gibbers and scratches itself. Everytime you move it does a back flip.',
+    weakness: 'banana',
+    attack: 25
+  },
+  {
+    name: 'Harvey the Hacker',
+    description: 'A dorky looking kid with a mishapen afro, saucony running shoes and a laptop.',
+    weakness: 'electromagnet',
+    attack: 5
   },
   
 ];
