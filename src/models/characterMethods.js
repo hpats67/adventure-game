@@ -1,4 +1,4 @@
-let character = require('./adventurer');
+let character = require('./character');
 
 const charMethods = {};
 
