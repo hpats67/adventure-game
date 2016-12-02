@@ -46,10 +46,14 @@
         </div>
       </div>
 
-      <!-- is this ng-model="character"? --> 
-      <!--<div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="run a functions to 1)useItem(), 2) useWeapon()">
-        {{inventory}}
-      </div>-->
+      <!-- is this ng-model="character"? -->
+      <div ng-controller="characterController"></div>
+        <input ng-model="heroName">
+        <h1>Hero Name: {{characterName}}</h1>
+        <h2>Health: {{characterHealth}}</h2>
+      <div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="run a functions to 1)useItem(), 2) useWeapon()">
+        <h2>Inventory: {{inventory}}</h2>
+      </div>
 
     <!--</div>-->
 

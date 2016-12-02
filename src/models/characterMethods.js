@@ -4,6 +4,7 @@ const charMethods = {};
 
 charMethods.setName = function(name) {
   character.name = name;
+  return character;
 };
 
 charMethods.useItem = function(item) {
