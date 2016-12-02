@@ -5,8 +5,8 @@
     <title>Monster Mansion</title>
   </head>
   <body>
-    <div ng-controller="gameController">
-      <div ng-model="room" ng-controller="roomController">
+    <!--<div ng-controller="gameController">-->
+      <div ng-controller="roomController">
         {{roomTitle}}
         <hr>
         {{roomDescription}}
@@ -44,11 +44,11 @@
       </div>
 
       <!-- is this ng-model="character"? --> 
-      <div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="<!-- run a functions to 1)useItem(), 2) useWeapon() -->">
+      <!--<div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="run a functions to 1)useItem(), 2) useWeapon()">
         {{inventory}}
-      </div>
+      </div>-->
 
-    </div>
+    <!--</div>-->
 
   </body>
 </html>

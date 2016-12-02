@@ -1,4 +1,9 @@
-const angular = require('angular');
+//import room from '../models/roomMethods';
+import rooms from '../models/rooms';
 
-const app = angular.model('monsterMansion', []);
+roomController.$inject = ['$scope'];
 
+export default function roomController($scope) {
+  $scope.roomTitle = rooms.Foyer.name;
+  $scope.roomDescription = rooms.Foyer.description;
+}
