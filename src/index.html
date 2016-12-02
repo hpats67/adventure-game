@@ -11,10 +11,13 @@
         <hr>
         {{roomDescription}}
         <br>
-        {{itemName}}
-        <br>
-        {{itemDescription}}
-        <br>
+        <div ng-repeat="item in items">
+          {{item.name}}
+          <br>
+          {{item.description}}
+          <br>
+        </div>
+
         {{monsterName}}
         <br>
         {{monsterDescription}}
