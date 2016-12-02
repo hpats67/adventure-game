@@ -1,7 +1,7 @@
 import angular from 'angular';
 // import character from 'character';
 // import game from 'game';
-// import items from 'items';
+// import items from './items';
 // import monsters from 'monsters';
 import room from './room';
 
