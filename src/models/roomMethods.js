@@ -78,4 +78,4 @@ roomMethods.getRoom = function(currRoomObj, direction) {
   }
 };
 
-
+export default roomMethods;
