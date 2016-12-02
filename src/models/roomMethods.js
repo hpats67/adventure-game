@@ -1,6 +1,7 @@
 let rooms = require('./rooms');
 let monsterMethods = require('./monsterMethods');
 let itemMethods = require('./itemMethods');
+let weaponMethods = require('./weaponMethods');
 
 const roomMethods = {};
 
@@ -17,24 +18,24 @@ roomMethods.addMonster = function(roomObj) {
   }
 };
 
-roomMethods.addItem = function(roomObj) {
+roomMethods.addItemWeapons = function(roomObj) {
 // 60% chance of item - if over 90% 2 items appear
   var randomCell;
   let itemChance = Math.random();
-  if (itemChance > .90) {
-    for (let i = 0; i < 2; i++) {
-      randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
-      while (roomObj['roomArea' + randomCell]) { // if there's something in the cell, do-over
-        randomCell = Math.floor((Math.random() * 9) + 1);
-      }
-      roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
+  // if a really good roll -- you also get an item
+  if (itemChance > .75) {
+    randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
+    while (roomObj['roomArea' + randomCell]) { // if there's something in the cell, do-over
+      randomCell = Math.floor((Math.random() * 9) + 1);
     }
-  } else if (itemChance > .60) {
+    roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
+  // if an ok roll, you just get a weapon
+  } else if (itemChance > .30) {
     randomCell = Math.floor((Math.random() * 9) + 1);
     while (roomObj['roomArea' + randomCell]) {
       randomCell = Math.floor((Math.random() * 9) + 1);
     }
-    roomObj['roomArea' + randomCell] = itemMethods.get();
+    roomObj['roomArea' + randomCell] = weaponMethods.get();
   }
 };
 
@@ -70,7 +71,7 @@ roomMethods.getRoom = function(currRoomObj, direction) {
     const roomArray = rooms.availableRooms.splice(randNum, 1);   // remove the room name from the array of names
     const newRoomObj = roomArray[0];
     roomMethods.linkRooms(currRoomObj, newRoomObj, direction);
-    roomMethods.addItem(newRoomObj);
+    roomMethods.addItemWeapons(newRoomObj);
     roomMethods.addMonster(newRoomObj);
 
     return newRoomObj;
