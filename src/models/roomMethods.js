@@ -1,7 +1,7 @@
-let rooms = require('./rooms');
-let monsterMethods = require('./monsterMethods');
-let itemMethods = require('./itemMethods');
-let weaponMethods = require('./weaponMethods');
+import rooms from './rooms';
+import monsterMethods from './monsterMethods';
+import itemMethods from './itemMethods';
+import weaponMethods from './weaponMethods';
 
 const roomMethods = {};
 
@@ -61,6 +61,7 @@ roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
   }
 };
 
+<<<<<<< HEAD
 roomMethods.getRoom = function(currRoomObj, direction) {
 // Return if the room exists, return the room object
   if (currRoomObj[direction]) {
@@ -79,3 +80,6 @@ roomMethods.getRoom = function(currRoomObj, direction) {
 };
 
 export default roomMethods;
+=======
+// why doesn't roomMethods export anything?
+>>>>>>> 4c04b4ed367bb2c617cafd201aa87b11305ba5be
