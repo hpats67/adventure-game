@@ -16,5 +16,4 @@ export default function roomController($scope) {
   $scope.monsterDescription = monsterObject.description;
   $scope.monsterName = monsterObject.name;
 
-
 }

@@ -1,4 +1,4 @@
-const items = require('./items');
+import items from './items';
 
 const itemMethods = {};
 
@@ -8,4 +8,4 @@ itemMethods.get = function() {
   return selectedItem[0];
 };
 
-module.exports = itemMethods;
+export default itemMethods;

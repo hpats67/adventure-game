@@ -82,4 +82,4 @@ const rooms = {
 
 rooms.availableRooms = ['Foyer', 'Hallway', 'Ballroom', 'Basement'];
 
-module.exports = rooms;
+export default rooms;

@@ -1,6 +1,6 @@
-let rooms = require('./rooms');
-let monsterMethods = require('./monsterMethods');
-let itemMethods = require('./itemMethods');
+import rooms from './rooms';
+import monsterMethods from './monsterMethods';
+import itemMethods from './itemMethods';
 
 const roomMethods = {};
 
@@ -73,4 +73,4 @@ roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
   }
 };
 
-
+// why doesn't roomMethods export anything?
