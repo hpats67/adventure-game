@@ -26,4 +26,14 @@ module.exports = [
     description: 'Doesn\'t seem to be anyone around to stop you...',
     value: 9
   },
+  {
+    name: 'amethyst necklace',
+    description: 'A beautiful silver chain holds an amethyst charm that glows with an inner fire.',
+    value: 15
+  },
+  {
+    name: 'envelope of white powder',
+    description: 'A beautiful silver chain holds an amethyst charm that glows with an inner fire.',
+    value: -10
+  },
 ];
