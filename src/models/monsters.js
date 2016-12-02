@@ -67,4 +67,4 @@ monsters.compendium = [
 monsters.active = [];
 monsters.graveyard =[];
 
-module.exports = monsters;
+export default monsters;

@@ -1,4 +1,4 @@
-const monsters = require('./monsters');
+import monsters from './monsters';
 
 const monsterMethods = {};
 
@@ -10,7 +10,6 @@ monsterMethods.get = function() {
   const removedMonster = monsters.compendium.splice(pickMonster, 1);
   monsters.active.push(removedMonster);
 
-  console.log(removedMonster);
   return removedMonster[0];
 };
 
@@ -23,5 +22,5 @@ monsterMethods.bury = function(deadMonster) {
   monsters.graveyard.push(deadMonster); 
 };
 
-module.exports = monsterMethods;
+export default monsterMethods;
 
