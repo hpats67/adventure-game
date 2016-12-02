@@ -3,3 +3,22 @@ table td {
   min-width: 100px;
   height: 100px;
 }
+
+button {
+  min-height: 75px;
+  min-width: 75px;
+  background: url(/src/images/door1.png) no-repeat;
+  background-size: 100%;
+  border: none;
+}
+
+html {
+  background: url(/src/images/background.jpg) no-repeat;
+  background-size: 100%;
+}
+
+body {
+  width: 85%;
+  margin: 2% auto;
+  background-color: rgba(83, 103, 138, .8);
+}
