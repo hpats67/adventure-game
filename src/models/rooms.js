@@ -16,10 +16,10 @@ const rooms = {
     roomArea7: {},
     roomArea8: {},
     roomArea9: {},
-    n: '',
-    s: '',
-    e: '',
-    w: ''
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: '',
   },
   Hallway: {
     name: 'Hallway',
