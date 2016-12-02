@@ -33,7 +33,7 @@ module.exports = [
   },
   {
     name: 'envelope of white powder',
-    description: 'A beautiful silver chain holds an amethyst charm that glows with an inner fire.',
+    description: 'A .',
     value: -10
   },
 ];
