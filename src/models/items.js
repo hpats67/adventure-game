@@ -26,6 +26,4 @@ module.exports = [
     description: 'Doesn\'t seem to be anyone around to stop you...',
     value: 9
   },
-
-
 ];
