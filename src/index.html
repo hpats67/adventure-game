@@ -21,32 +21,32 @@
         {{monsterName}}
         <br>
         {{monsterDescription}}
-
+        <div id="doors-and-room">
         <!-- and how do we populate the table and then buttons in the table? -->
-        <div id="northButton"><button ng-click="nButton"><img src="./images/door.png"></button></div>
-        <div id="westButton"><button ng-click="wButton"><img src="./images/door.png"></button></button></div>
-        <table> <!-- clickable images for each room hide and show go here-->
-          <tr>
-            <td>{{roomArea1}}</td>
-            <td>{{roomArea2}}</td>
-            <td>{{roomArea3}}</td>
-          </tr>
+          <div id="northButton"><button ng-click="changeRoom({{currentRoom}}, northDoor)"><h1>N</h1></button></div>
+          <div id="westButton"><button ng-click="changRoom({{currentRoom}}, westDoor)"><h1>W</h1></button></button></div>
+          <table> <!-- clickable images for each room hide and show go here-->
+            <tr>
+              <td>{{roomArea1}}</td>
+              <td>{{roomArea2}}</td>
+              <td>{{roomArea3}}</td>
+            </tr>
 
-          <tr>
-            <td>{{roomArea4}}</td>
-            <td>{{roomArea5}}</td>
-            <td>{{roomArea6}}</td>
-          </tr>
+            <tr>
+              <td>{{roomArea4}}</td>
+              <td>{{roomArea5}}</td>
+              <td>{{roomArea6}}</td>
+            </tr>
 
-          <tr>
-            <td>{{roomArea7}}</td>
-            <td>{{roomArea8}}</td>
-            <td>{{roomArea9}}</td>
-          </tr>
-        </table>
-        <div id="eastButton"><button ng-click="eButton"><img src="./images/door.png"></button></div>
-        <div id="southButton"><button ng-click="sButton"><img src="./images/door.png"></button></div>
-
+            <tr>
+              <td>{{roomArea7}}</td>
+              <td>{{roomArea8}}</td>
+              <td>{{roomArea9}}</td>
+            </tr>
+          </table>
+          <div id="eastButton"><button ng-click="changeRoom({{currentRoom}}, eastDoor)"><h1>E</h1></button></div>
+          <div id="southButton"><button ng-click="changeRoom({{currentRoom}}, southDoor)"><h1>S</h1></button></div>
+        </div>
       </div>
 
       <!-- is this ng-model="character"? --> 
