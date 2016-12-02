@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html ng="monsterMansion">
+<html ng-app="monsterMansion">
   <head>
     <meta charset="UTF-8">
     <title>Monster Mansion</title>
   </head>
   <body>
-    <div ng-controller="gameController">
-      <div ng-model="room" ng-controller="roomController">
+    <!--<div ng-controller="gameController">-->
+      <div ng-controller="roomController">
         {{roomTitle}}
         <hr>
         {{roomDescription}}
         <br>
+        {{itemName}}
+        <br>
         {{itemDescription}}
+        <br>
+        {{monsterName}}
         <br>
         {{monsterDescription}}
 
-        <!-- should this be a 5 X 5 grid? -->
         <!-- and how do we populate the table and then buttons in the table? -->
         <div id="northButton"><button ng-click="nButton"><img src="./images/door.png"></button></div>
         <div id="westButton"><button ng-click="wButton"><img src="./images/door.png"></button></button></div>
@@ -44,11 +47,11 @@
       </div>
 
       <!-- is this ng-model="character"? --> 
-      <div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="<!-- run a functions to 1)useItem(), 2) useWeapon() -->">
+      <!--<div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="run a functions to 1)useItem(), 2) useWeapon()">
         {{inventory}}
-      </div>
+      </div>-->
 
-    </div>
+    <!--</div>-->
 
   </body>
 </html>

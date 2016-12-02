@@ -11,7 +11,7 @@ monsterMethods.get = function() {
   monsters.active.push(removedMonster);
 
   console.log(removedMonster);
-  return removedMonster;
+  return removedMonster[0];
 };
 
 //remove from active
@@ -22,8 +22,6 @@ monsterMethods.bury = function(deadMonster) {
   });
   monsters.graveyard.push(deadMonster); 
 };
-
-monsterMethods.get();
 
 module.exports = monsterMethods;
 
