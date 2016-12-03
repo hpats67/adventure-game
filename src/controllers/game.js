@@ -1,7 +1,4 @@
 import roomMethods from '../models/roomMethods';
-import character from '../models/character';
-import charMethods from './characterMethods';
-import monsterMethods from './monsterMethods';
 import gameMethods from './gameMethods';
 
 gameController.$inject = ['$scope'];

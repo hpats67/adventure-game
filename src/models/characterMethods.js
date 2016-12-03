@@ -1,12 +1,13 @@
 import character from './character';
 import gameMethods from './gameMethods';
+import monsterMethods from './monsterMethods';
 
 const charMethods = {};
 
 charMethods.useItem = function(item) {
   character.hp += item.value;
   if (character.hp <= 0) {
-    gameMethods.endOfGame(); //do i have to pass the graveyard into this?
+    gameMethods.endOfGame();
   }
 };
 
@@ -24,7 +25,7 @@ charMethods.battleMonster = function(item, monster) {
   //check if matches monster weakness
   if (item.name === monster.weakness) {
     charMethods.deleteFromInv(item);
-    //remove monster from room square in room obj
+    //TODO: remove monster from room square in room obj
     monsterMethods.bury(monster);
   }else{
     gameMethods.hurtCharacter(monster);

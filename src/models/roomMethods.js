@@ -60,9 +60,24 @@ roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
   }
 };
 
-roomMethods.check4Monster = function(room) {
-  //for loop to check each cell for a monster
-  return boolean
+roomMethods.check4Monster = function(roomObj) {
+  //if monster found then return obj that notates true and cell placement
+  //else return obj that notates false;
+  const monsterCheck = {};
+
+  for (let i = 0; i < 9; i++) {
+    if (roomObj['roomArea' + i]) {
+      if (roomObj['roomArea' + i].type === 'monster') {
+        monsterCheck.isMonster = true;
+        monsterCheck.monster = roomObj['roomArea' + i];
+        monsterCheck.place = 'roomArea' + i;
+
+        return monsterCheck;
+      }
+    }
+  }
+  monsterCheck.isMonster = false;
+  return monsterCheck;
 };
 
 roomMethods.getRoom = function(currRoomObj, direction) {
