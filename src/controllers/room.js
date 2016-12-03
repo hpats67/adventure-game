@@ -6,7 +6,7 @@ import monsterMethods from '../models/monsterMethods';
 roomController.$inject = ['$scope'];
 
 export default function roomController($scope) {
-
+  $scope.currentRoom = rooms.Foyer;
   $scope.getRoom = roomMethods.getRoom;
 
 }
