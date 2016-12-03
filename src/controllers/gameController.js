@@ -1,40 +1,38 @@
 import roomMethods from '../models/roomMethods';
 import character from '../models/character';
 import charMethods from './characterMethods';
-
+import monsterMethods from './monsterMethods';
+import gameMethods from './gameMethods';
 
 gameController.$inject = ['$scope'];
 
 export default function gameController($scope) {
+
+  //when door is clicked
   $scope.changeRoom = function(currRoom, direction) {
     $scope.currLocation = roomMethods.getRoom(currRoom, direction);
   };
 
-  //click on inventory button, call useInvItem(pass in button name or obj)
+  //when inventory button is clicked
   $scope.useInvItem = function(item, currRoom) {
-    //if item is weapon then
+    //check if monster is in room
+    const isMonster = charMethods.check4Monster(currRoom);
     if (item.type === 'weapon') {
-      //check if monster present
-      charMethods.check4Monster(currRoom)
-        //if not present alert("you can't use that item here")
-        //else if present
-        charMethods.battleMonster(item)
-    //if item is item then
-    }else if (item.type === 'item'){
-      //call useItem(pass in item)
+
+      if (isMonster) {
+        charMethods.battleMonster(item);
+      }else{
+        alert('I\'m sorry, you can\'t use that item in this room.');
+      }
+
+    }else if (item.type === 'item') {
       charMethods.useItem(item);
-      //check if monster present
-      charMethods.check4Monster(currRoom)
-      //for loop to check each cell for a monster
-        //if not present
-          //update hp
-          //if hp <= 0 call endOfGame(graveyard)
-        //if present 
-            //monster attacks character
-            charMethods.hitCharacter(monster)
-            //take damage off character
-              //update hp
-              //if hp <= 0 call endOfGame(graveyard)
+
+      if (isMonster) {
+        //monster attacks character
+        charMethods.hitCharacter(monster);
+      }
+    }
   };
   
 }
@@ -44,24 +42,25 @@ charMethods.check4Monster = function(room) {
   return boolean
 };
 
-charMethods.battleMonster = function(item) {
+charMethods.battleMonster = function(item, monster) {
   //check if matches monster weakness
-    //if match
-      //remove item from inventory
-      //remove monster from room square in room obj
-      //add monster to graveyard
-    //else if not match
-      //monster attacks character
-      charMethods.hitCharacter(monster)
-      //take damage off character
-        //update hp
-        //if hp <= 0 call endOfGame(graveyard)
+  if (item.name === monster.weakness) {
+    //remove item from inventory
+    //remove monster from room square in room obj
+    monsterMethods.bury(monster);
+  }else{
+    charMethods.hitCharacter(monster);
+  }
 };
 
 charMethods.hitCharacter = function(monster) {
-
+  character.hp -= monster.attack;
+  if (character.hp <= 0) {
+    gameMethods.endOfGame(); //do i have to pass the graveyard into this?
+  }
 };
 
-charMethods.check4Monster = function() {
-
+gameMethods.endOfGame = function() {
+  //mutates and displays graveyard
+  //is graveyard always hidden and then this function displays it?
 };
