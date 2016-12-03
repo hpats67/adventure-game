@@ -34,10 +34,10 @@ const rooms = {
     roomArea7: {},
     roomArea8: {},
     roomArea9: {},
-    n: '',
-    s: '',
-    e: '',
-    w: ''
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
   },
   Ballroom: {
     name: 'Ballroom',
@@ -54,10 +54,10 @@ const rooms = {
     roomArea7: {},
     roomArea8: {},
     roomArea9: {},
-    n: '',
-    s: '',
-    e: '',
-    w: ''
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
   },
   Basement: {
     name: 'Basement',
@@ -73,10 +73,10 @@ const rooms = {
     roomArea7: {},
     roomArea8: {},
     roomArea9: {},
-    n: '',
-    s: '',
-    e: '',
-    w: ''
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
   }
 };
 
