@@ -6,18 +6,18 @@ const {assert} = chai;
 
 describe('the useInvItem method', () => {
 
-  beforeEach(angular.mock.module('game'));
+  beforeEach(angular.mock.module('controllers'));
 
-  let $game;
+  let $controllers;
   let $scope;
 
-  beforeEach(angular.mock.inject(function($rootScope, _$game_) {
+  beforeEach(angular.mock.inject(function($rootScope, _$controllers_) {
     $scope = $rootScope.new();
-    $game = _$game_;
+    $controllers = _$controllers_;
   }));
 
   it('hurts character if attacked by monster', () => {
-    assert;
+    assert /* char.hp "before" > char.hp "after" */;
   });
 
   it('displays graveyard when character loses all hp', () => {
