@@ -5,7 +5,6 @@ import weaponMethods from './weaponMethods';
 
 const roomMethods = {};
 
-
 roomMethods.addMonster = function(roomObj) {
 // 40% chance of monster landing randomly in one cell in the room
   let monsterChance = Math.random();
@@ -59,6 +58,26 @@ roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
     newRoom.e = startRoom.name;
     break;
   }
+};
+
+roomMethods.check4Monster = function(roomObj) {
+  //if monster found then return obj that notates true and cell placement
+  //else return obj that notates false;
+  const monsterCheck = {};
+
+  for (let i = 0; i < 9; i++) {
+    if (roomObj['roomArea' + i]) {
+      if (roomObj['roomArea' + i].type === 'monster') {
+        monsterCheck.isMonster = true;
+        monsterCheck.monster = roomObj['roomArea' + i];
+        monsterCheck.place = 'roomArea' + i;
+
+        return monsterCheck;
+      }
+    }
+  }
+  monsterCheck.isMonster = false;
+  return monsterCheck;
 };
 
 roomMethods.getRoom = function(currRoomObj, direction) {
