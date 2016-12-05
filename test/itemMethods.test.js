@@ -8,7 +8,7 @@ describe('the get item method', () => {
 
   it('gets an item', () => {
     const returnedArray = itemMethods.get();
-    assert.isOk(returnedArray[0].type, 'itemMethods.get returns an object with a type property');
+    assert.isOk(returnedArray[0].type, 'weaponMethods.get returns an object with a type property');
   });
 
 });
