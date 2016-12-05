@@ -15,7 +15,7 @@ const rooms = {
     roomArea6: {},
     roomArea7: {},
     roomArea8: {},
-    roomArea9: {},
+    monster: {},
     northDoor: '',
     southDoor: '',
     eastDoor: '',
@@ -33,7 +33,7 @@ const rooms = {
     roomArea6: {},
     roomArea7: {},
     roomArea8: {},
-    roomArea9: {},
+    monster: {},
     northDoor: '',
     southDoor: '',
     eastDoor: '',
@@ -53,7 +53,7 @@ const rooms = {
     roomArea6: {},
     roomArea7: {},
     roomArea8: {},
-    roomArea9: {},
+    monster: {},
     northDoor: '',
     southDoor: '',
     eastDoor: '',
@@ -72,7 +72,7 @@ const rooms = {
     roomArea6: {},
     roomArea7: {},
     roomArea8: {},
-    roomArea9: {},
+    monster: {},
     northDoor: '',
     southDoor: '',
     eastDoor: '',
@@ -80,6 +80,6 @@ const rooms = {
   }
 };
 
-rooms.availableRooms = ['Foyer', 'Hallway', 'Ballroom', 'Basement'];
+rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement'];
 
 export default rooms;
