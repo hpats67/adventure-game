@@ -30,6 +30,7 @@ charMethods.battleMonster = function(weapon, currRoom) {
     charMethods.deleteFromInv(weapon);
     monsterMethods.bury(currRoom.monster);
     currRoom.monster = false;
+    alert(`You killed ${currRoom.monster}!`);
   }else{
     gameMethods.hurtCharacter(currRoom.monster);
   }

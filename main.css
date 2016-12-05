@@ -1,3 +1,7 @@
+p, h1, h2, h3 {
+  color: silver;
+}
+
 table td {
   /*border: 1px dashed cyan;*/
   min-width: 100px;
@@ -26,6 +30,17 @@ body {
   background-color: rgba(83, 103, 138, .8);
 }
 
+.room-inv {
+  display: inline-block;
+  max-width: 45%;
+  padding: 1rem;
+}
+
+.room-inv h2, h3, h4, p {
+  color: silver;
+  margin: 0;
+}
+
 #doors-and-room {
   margin: auto;
   width: 30rem;
@@ -44,6 +59,10 @@ table {
   right: 0%;
   top: 50%;
   display: inline;
+}
+
+button h1 {
+  color: black;
 }
 
 #northButton {
@@ -87,6 +106,8 @@ table {
 
 .use-inv h3 {
   position: relative;
+  color: darkblue;
+  text-shadow: black 1px 1px;
   bottom: -30px;
 }
 
@@ -106,19 +127,22 @@ table {
 
 .inv-area h3 {
   position: relative;
+  color: darkblue;
+  text-shadow: black 1px 1px;
   bottom: -30px;
-  margin: 0;
 }
 
 #room {
   display: inline-block;
   max-width: 45%;
+  padding: 1rem;
 }
 
 #monster {
   display: inline-block;
   position: relative;
-  max-width: 45%;
+  max-width: 40%;
+  padding: 1rem;
   clear: left;
   left: 8%;
 }

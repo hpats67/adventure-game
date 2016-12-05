@@ -15,6 +15,7 @@ gameMethods.endOfGame = function() {
   //when dead = true use ng-show on the element on index.html that shows the graveyard
   //where does this live on index.html? in the <tag> that holds the inventory?
   character.isDead = true;
+  alert('You have died! Reload page to play again!');
 };
 
 gameMethods.useInvItem = function(item, currRoom) {

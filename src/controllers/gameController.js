@@ -16,6 +16,7 @@ export default function gameController($scope) {
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
     $scope.currentRoom = roomMethods.getRoom(currRoom, direction);
+    $scope.roomInv = $scope.currentRoom.inventory;
   };
 
   // If user clicks monster

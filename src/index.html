@@ -6,6 +6,7 @@
     <title>Monster Mansion</title>
   </head>
   <body>
+    <header><h1 style="text-align: center">MONSTER MANSION</h1></header>
     <div ng-controller="gameController">
       <div ng-controller="roomController">
         <div id="room">
@@ -18,10 +19,12 @@
           <h3>{{currentRoom.monster.name}}</h3>
           <p>{{currentRoom.monster.description}}</p>
         </div>
-        <div mg-model="roomInv" ng-repeat="item in roomInv">
-          {{item.name}}
+        <div mg-model="roomInv" ng-repeat="item in roomInv" class="room-inv">
+          <h3>Item:</h3>
+          <h4>{{item.name}}</h4>
           <br>
-          {{item.description}}
+          <h3>Description:</h3>
+          <p>{{item.description}}</p>
           <br>
         </div>
         <div id="doors-and-room">
