@@ -4,7 +4,7 @@ import chai from 'chai';
 //what does this syntax mean?
 const {assert} = chai;
 
-describe('the useInvItem method', () => {
+describe.skip('the useInvItem method', () => {
 
   beforeEach(angular.mock.module('controllers'));
 

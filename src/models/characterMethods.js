@@ -12,7 +12,7 @@ charMethods.useItem = function(item) {
   }
 };
 
-//more functionality will proably go in this method when
+//more functionality will probably go in this method when
 //we write the click on items/weapons buttons methods
 charMethods.pickUpItem = function(item) {
   character.inventory.push(item);
@@ -23,10 +23,10 @@ charMethods.deleteFromInv = function(item) {
   character.inventory.splice(index, 1);
 };
 
-charMethods.battleMonster = function(item, currRoom) {
+charMethods.battleMonster = function(weapon, currRoom) {
   //check if matches monster weakness
-  if (item.name === currRoom.monster.weakness) {
-    charMethods.deleteFromInv(item);
+  if (weapon.name === currRoom.monster.weakness) {
+    charMethods.deleteFromInv(weapon);
     monsterMethods.bury(currRoom.monster);
     currRoom.monster = false;
   }else{
