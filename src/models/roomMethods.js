@@ -30,6 +30,7 @@ roomMethods.addItemWeapons = function(roomObj) {
     }
     roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
   }
+  return itemChance;
 };
 
 roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {

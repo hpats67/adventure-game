@@ -89,4 +89,57 @@ describe('Room methods', () => {
     }
   });
 
+  it('adds a weapon to the roomObj', () => {
+
+    var Foyer = { name: 'Foyer', monster: false,
+      roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
+      roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
+      northDoor: '', southDoor: '', eastDoor: '', westDoor: '' };
+    const itemChance = roomMethods.addItemWeapons(Foyer);
+    if (itemChance > .30) {
+      let used;
+      for (let i = 1; i < 9; i++) {
+        if (Foyer['roomArea' + i].type !== undefined) {
+          used = i;
+          break;
+        }
+      }
+      // If something was added, assert that it's an object with a weapon property
+      assert.equal(Foyer['roomArea' + used].type, 'weapon', 'chance is above 30%, so weapon');
+    } else {
+      for (let i = 1; i < 9; i++) {
+        // If nothing was added, assert that all type properties are still undefined
+        assert.equal(Foyer['roomArea' + i].type, undefined, 'chance is below 30%, so no weapon');
+      }
+    }
+  });
+
+
+  it('adds an item to the roomObj', () => {
+
+    var Foyer = { name: 'Foyer', monster: false,
+      roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
+      roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
+      northDoor: '', southDoor: '', eastDoor: '', westDoor: '' };
+    const itemChance = roomMethods.addItemWeapons(Foyer);
+    if (itemChance > .75) {
+      let used;
+      for (let i = 1; i < 9; i++) {
+        console.log('roomArea' + i);
+        if (Foyer['roomArea' + i].type !== undefined ||
+          Foyer['roomArea' + i].type !== 'weapon') {
+          used = i;
+          break;
+        }
+      }
+      // If something was added, assert that it's an object with an item property
+      assert.equal(Foyer['roomArea' + used].type, 'item', 'chance is above 75%, so item');
+    } else {
+      for (let i = 1; i < 9; i++) {
+        // If nothing was added, assert that no type properties are set to item
+        assert.notEqual(Foyer['roomArea' + i].type, 'item', 'chance is below 75%, so no item');
+      }
+    }
+  });
+
 });
