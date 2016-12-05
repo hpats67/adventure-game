@@ -112,3 +112,11 @@ table {
   clear: left;
   left: 8%;
 }
+
+.black {
+  color: black;
+}
+
+.red {
+  color: darkred;
+}

@@ -37,7 +37,7 @@
 
               <tr>
                 <td><div class="inv-area" ng-show="currentRoom.roomArea4.name">{{currentRoom.roomArea4}}</td>
-                <td id="monster-id" ng-show="currentRoom.monster.name"></td>
+                <td id="monster-id" ng-show="currentRoom.monster.name" ng-click="monsterClick(currentRoom.monster)"></td>
                 <td><div class="inv-area" ng-show="currentRoom.roomArea5.name">{{currentRoom.roomArea5}}</td>
               </tr>
 
@@ -61,7 +61,7 @@
           <input type="submit" id="submit" value="Submit" >
         </div>
         <h1>Name: {{characterName}}</h1>
-        <h2>Health: {{characterHealth}}</h2>
+        <h2>Health: <span ng-class="{black: characterHealth>=100, red: characterHealth<100}">{{characterHealth}}</span></h2>
         <div ng-model="inventory" class="inv" ng-repeat="inventory in inventory">
           <div class="use-inv" ng-click="useInv(inventory, currentRoom)"><h3>{{inventory.name}}</h3></div>
         </div>
