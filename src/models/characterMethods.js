@@ -6,6 +6,7 @@ const charMethods = {};
 
 charMethods.useItem = function(item) {
   character.hp += item.value;
+  charMethods.deleteFromInv(item);
   if (character.hp <= 0) {
     gameMethods.endOfGame();
   }
@@ -16,19 +17,18 @@ charMethods.pickUpItem = function(item) {
 };
 
 charMethods.deleteFromInv = function(item) {
-  character.inventory = character.inventory.filter(function(el) {
-    return el.name !== item.name;
-  });
+  let index = character.inventory.indexOf(item);
+  character.inventory.splice(index, 1);
 };
 
-charMethods.battleMonster = function(item, monster) {
+charMethods.battleMonster = function(item, currRoom) {
   //check if matches monster weakness
-  if (item.name === monster.weakness) {
+  if (item.name === currRoom.monster.weakness) {
     charMethods.deleteFromInv(item);
-    //TODO: remove monster from room square in room obj
-    monsterMethods.bury(monster);
+    monsterMethods.bury(currRoom.monster);
+    currRoom.monster = false;
   }else{
-    gameMethods.hurtCharacter(monster);
+    gameMethods.hurtCharacter(currRoom.monster);
   }
 };
 

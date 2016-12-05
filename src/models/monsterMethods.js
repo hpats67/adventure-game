@@ -16,9 +16,6 @@ monsterMethods.get = function() {
 //remove from active
 //push to graveyard
 monsterMethods.bury = function(deadMonster) {
-  monsters.active = monsters.active.filter(function(el) {
-    return el.name !== deadMonster.name;
-  });
   monsters.graveyard.push(deadMonster); 
 };
 
