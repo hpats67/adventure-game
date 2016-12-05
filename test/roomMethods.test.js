@@ -34,19 +34,14 @@ describe('Room methods', () => {
 
   it('looks up a room when given an existing link', () => {
 
-    var Foyer = { name: 'Foyer',
-      description: 'You\'re in the entry of a large, old house. More of a mansion, really. ' +
-      'It looks like no one has kept up with cleaning or repairs in a long time, dust and ' +
-      'cobwebs cover every surface, some of the furniture is draped in dingy once-white sheets.' +
-      'There doesn\'t seem to be anyone here, might as well take a look around.',
-      monster: false,
+    var Foyer = { name: 'Foyer', monster: false, inventory: [],
       roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: 'Hallway', southDoor: '', eastDoor: '', westDoor: ''};
     var Hallway = { name: 'Hallway',
       description: 'A long stately hallway, lined with fading paintings and dusty statues.' +
       'The lights look like old gas lamps, but none are lit. There\'s a door at the end of the hall.',
-      monster: false,
+      monster: false, inventory: [],
       roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: ''};
@@ -58,12 +53,7 @@ describe('Room methods', () => {
 
   it('gets a new room when given an unused door', () => {
 
-    var Foyer = { name: 'Foyer',
-      description: 'You\'re in the entry of a large, old house. More of a mansion, really. ' +
-      'It looks like no one has kept up with cleaning or repairs in a long time, dust and ' +
-      'cobwebs cover every surface, some of the furniture is draped in dingy once-white sheets.' +
-      'There doesn\'t seem to be anyone here, might as well take a look around.',
-      monster: false,
+    var Foyer = { name: 'Foyer', monster: false, inventory: [],
       roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: ''};
@@ -76,10 +66,9 @@ describe('Room methods', () => {
 
   it('adds a monster to the roomObj.monster property', () => {
 
-    var Foyer = { name: 'Foyer',
-      monster: false,
-      roomArea1: { used: true }, roomArea2: { used: true }, roomArea3: { used: true }, roomArea4: { used: true },
-      roomArea5: { used: true }, roomArea6: { used: true }, roomArea7: { used: true }, roomArea8: {},
+    var Foyer = { name: 'Foyer', monster: false, inventory: [],
+      roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
+      roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: ''};
     const monsterChance = roomMethods.addMonster(Foyer);
     if (monsterChance < .40) {
@@ -89,9 +78,9 @@ describe('Room methods', () => {
     }
   });
 
-  it('adds a weapon to the roomObj', () => {
+  it('adds a weapon to the roomObj and inventory array', () => {
 
-    var Foyer = { name: 'Foyer', monster: false,
+    var Foyer = { name: 'Foyer', monster: false, inventory: [],
       roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: '' };
@@ -106,18 +95,20 @@ describe('Room methods', () => {
       }
       // If something was added, assert that it's an object with a weapon property
       assert.equal(Foyer['roomArea' + used].type, 'weapon', 'chance is above 30%, so weapon');
+      assert.equal(Foyer.inventory[0].type, 'weapon', 'adds a weapon to the inventory array');
     } else {
       for (let i = 1; i < 9; i++) {
         // If nothing was added, assert that all type properties are still undefined
         assert.equal(Foyer['roomArea' + i].type, undefined, 'chance is below 30%, so no weapon');
       }
+      assert.equal(Foyer.inventory.length, 0, 'no weapons in the inventory array');
     }
   });
 
 
   it('adds an item to the roomObj', () => {
 
-    var Foyer = { name: 'Foyer', monster: false,
+    var Foyer = { name: 'Foyer', monster: false, inventory: [],
       roomArea1: {}, roomArea2: {}, roomArea3: {}, roomArea4: {},
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: '' };
@@ -125,7 +116,6 @@ describe('Room methods', () => {
     if (itemChance > .75) {
       let used;
       for (let i = 1; i < 9; i++) {
-        console.log('roomArea' + i);
         if (Foyer['roomArea' + i].type !== undefined ||
           Foyer['roomArea' + i].type !== 'weapon') {
           used = i;
@@ -134,11 +124,13 @@ describe('Room methods', () => {
       }
       // If something was added, assert that it's an object with an item property
       assert.equal(Foyer['roomArea' + used].type, 'item', 'chance is above 75%, so item');
+      assert.equal(Foyer.inventory[1].type, 'item', 'adds an item to the inventory array');
     } else {
       for (let i = 1; i < 9; i++) {
         // If nothing was added, assert that no type properties are set to item
         assert.notEqual(Foyer['roomArea' + i].type, 'item', 'chance is below 75%, so no item');
       }
+      assert.isAtMost(Foyer.inventory.length, 1, 'chance is below 75%, so no item');
     }
   });
 
