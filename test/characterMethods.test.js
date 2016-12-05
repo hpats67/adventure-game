@@ -71,11 +71,11 @@ describe('the battle a monster method', () => {
 
   it('removes monster from room, puts monster in graveyard and removes object from inventory if correct weapon selected.', () => {
     let initRoomMonster = fakeRoom.monster;
+    charMethods.pickUpItem(fakeRightWeapon);
 
     charMethods.battleMonster(fakeRightWeapon, fakeRoom);
     assert.deepEqual(fakeRoom.monster, false, 'charMethods.battleMonster did not remove monster from room');
     assert.include(monsters.graveyard, initRoomMonster, 'charMethods.battleMonster did not put monster in graveyard');
-    //need an addToInventory method to do this - false positive
     assert.notInclude(character.inventory, fakeRightWeapon, 'charMethods.battleMonster did not remove weapon from inventory');
   });
 
