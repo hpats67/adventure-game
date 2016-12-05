@@ -14,9 +14,23 @@ describe('the pick up item method', () => {
     value: 0
   };
 
+  let fakeRoom = {
+    name: 'Fake Room',
+    description: 'A fake room for testing',
+    monster: {
+      type: 'monster',
+      name: 'neverwas',
+      description: 'Dangerous because unkown',
+      weakness: 'nothing',
+      attack: 15
+    },
+    inventory: []
+  };
+
   it('adds an item to inventory', () => {
-    charMethods.pickUpItem(irrelevantItem);
-    assert.include(character.inventory, irrelevantItem, 'charMethods.pickUpItem does not add an object to the array');
+    charMethods.pickUpItem(irrelevantItem, fakeRoom);
+    assert.include(character.inventory, irrelevantItem, 'charMethods.pickUpItem does not add an object to the character array');
+    assert.notInclude(fakeRoom.inventory, irrelevantItem, 'charMethods.pickUpItem does not remove an object to the room array');
   });
 
 });
@@ -47,7 +61,8 @@ describe('the battle a monster method', () => {
       description: 'Dangerous because unkown',
       weakness: 'nothing',
       attack: 15
-    }
+    },
+    inventory: []
   };
 
   let fakeWrongWeapon = {
@@ -71,7 +86,7 @@ describe('the battle a monster method', () => {
 
   it('removes monster from room, puts monster in graveyard and removes object from inventory if correct weapon selected.', () => {
     let initRoomMonster = fakeRoom.monster;
-    charMethods.pickUpItem(fakeRightWeapon);
+    charMethods.pickUpItem(fakeRightWeapon, fakeRoom);
 
     charMethods.battleMonster(fakeRightWeapon, fakeRoom);
     assert.deepEqual(fakeRoom.monster, false, 'charMethods.battleMonster did not remove monster from room');
