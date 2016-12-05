@@ -1,7 +1,7 @@
-import webpackConfig from './webpack.config';
+const webpackConfig = require('./webpack.config');
 webpackConfig.entry = {};
 
-export default function(config) {
+module.exports = function(config) {
   config.set({
     //base path to resolve patterns
     basePath: '',
@@ -12,7 +12,7 @@ export default function(config) {
     files: [
       './src/app.js',
       './node_modules/angular-mocks/angular-mocks.js',
-      './test/**/*.js' 
+      './test/**/*.js'
     ],
 
     webpack: webpackConfig,
@@ -24,7 +24,7 @@ export default function(config) {
     },
 
     //mock thru these browsers
-    browsers: ['Chrome', 'Safari'],
+    browsers: [ 'Chrome' ],
 
     //test results reporter
     reporters: ['spec'],
@@ -48,4 +48,4 @@ export default function(config) {
     concurrency: Infinity
 
   });
-}
+};
