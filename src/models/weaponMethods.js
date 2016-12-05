@@ -1,10 +1,10 @@
-import items from './weapons';
+import weapons from './weapons';
 
 const weaponMethods = {};
 
 weaponMethods.get = function() {
-  let index = Math.floor(Math.random() * (items.length + 1));
-  let selectedWeapon = items.splice(index, 1);
+  let index = Math.floor(Math.random() * (weapons.length + 1));
+  let selectedWeapon = weapons.splice(index, 1);
   return selectedWeapon; //selected weapon is an array of one object
 };
 

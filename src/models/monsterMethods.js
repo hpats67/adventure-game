@@ -8,7 +8,6 @@ const monsterMethods = {};
 monsterMethods.get = function() {
   const pickMonster = Math.floor(Math.random() * (monsters.compendium.length + 1));
   const removedMonster = monsters.compendium.splice(pickMonster, 1);
-  monsters.active.push(removedMonster);
 
   return removedMonster[0];
 };
