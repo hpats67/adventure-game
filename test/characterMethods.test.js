@@ -65,8 +65,9 @@ describe('the battle a monster method', () => {
 
   it('reduces character hp if wrong weapon selected', () => {
     let initCharHp = character.hp;
+
     charMethods.battleMonster(fakeWrongWeapon, fakeRoom);
-    assert.isBelow(character.hp, initCharHp);
+    assert.isBelow(character.hp, initCharHp, 'charMethods.battleMonster does not reduce the character hp when monster attacks');
   });
 
   it('removes monster from room, puts monster in graveyard and removes object from inventory if correct weapon selected.', () => {
@@ -77,6 +78,26 @@ describe('the battle a monster method', () => {
     assert.deepEqual(fakeRoom.monster, false, 'charMethods.battleMonster did not remove monster from room');
     assert.include(monsters.graveyard, initRoomMonster, 'charMethods.battleMonster did not put monster in graveyard');
     assert.notInclude(character.inventory, fakeRightWeapon, 'charMethods.battleMonster did not remove weapon from inventory');
+  });
+
+  describe('the use item method', () => {
+
+    let dangerousItem = {
+      name: 'dangerous item',
+      description: 'An instant-kill item',
+      value: -200
+    };
+    
+    it('changes the hp total of the character, deletes the item from inventory and if hp <= 0 ends the game', () => {
+      let initCharHp = character.hp;
+
+      charMethods.useItem(dangerousItem);
+      assert.isBelow(character.hp, initCharHp, 'charMethods.useItem does not reduce the character hp when item is dangerous');
+      assert.notInclude(character.inventory, dangerousItem, 'charMethods.deleteFromInv does not remove an object from the array');
+      assert.deepEqual(character.isDead, true, 'charMethods.useItem did not run endOfGame when character.hp <= 0');
+      //assert end of game happens
+    });
+
   });
 
 });
