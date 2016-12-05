@@ -27,11 +27,11 @@ gameMethods.useInvItem = function(item, currRoom) {
 
     if (currRoom.monster) {
       charMethods.battleMonster(item, currRoom);
-    }else{
+    } else {
       alert('I\'m sorry, you can\'t use that item in this room.');
     }
 
-  }else if (item.type === 'item') {
+  } else if (item.type === 'item') {
     charMethods.useItem(item);
   }
 };
