@@ -4,6 +4,7 @@
   "description": "An interactive dynamically generated map based adventure game.",
   "main": "app.js",
   "scripts": {
+    "pre": "eslint",
     "test": "karma start",
     "start": "webpack-dev-server --inline",
     "build": "webpack"
