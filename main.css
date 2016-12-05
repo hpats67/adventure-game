@@ -2,7 +2,8 @@ table td {
   /*border: 1px dashed cyan;*/
   min-width: 100px;
   height: 100px;
-  max-height: 100px;
+  max-width: 100px;
+  padding: 0;
 }
 
 button {
@@ -87,7 +88,6 @@ table {
 .use-inv h3 {
   position: relative;
   bottom: -30px;
-
 }
 
 #monster-id {
@@ -98,6 +98,16 @@ table {
 .inv-area {
   background: url(/src/images/invImage.png) no-repeat;
   background-size: 100%;
+  min-width: 80px;
+  max-width: 80px;
+  min-height: 80px;
+  display: inline-block;
+}
+
+.inv-area h3 {
+  position: relative;
+  bottom: -30px;
+  margin: 0;
 }
 
 #room {

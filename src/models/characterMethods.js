@@ -12,7 +12,9 @@ charMethods.useItem = function(item) {
   }
 };
 
-charMethods.pickUpItem = function(item) {
+charMethods.pickUpItem = function(item, currRoom) {
+  let index = currRoom.inventory.indexOf(item);
+  currRoom.inventory.splice(index, 1);
   character.inventory.push(item);
 };
 

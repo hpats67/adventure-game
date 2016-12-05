@@ -6,7 +6,7 @@ characterController.$inject = ['$scope'];
 
 export default function characterController($scope) {
   $scope.characterName = character.name;
-  $scope.inventory = character.inventory;
+
 
   $scope.changeName = function() {
     if($scope.text) {

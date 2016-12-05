@@ -19,7 +19,8 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: ''
+    westDoor: '',
+    inventory: []
   },
   Hallway: {
     name: 'Hallway',
@@ -37,7 +38,8 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: ''
+    westDoor: '',
+    inventory: []
   },
   Ballroom: {
     name: 'Ballroom',
@@ -57,7 +59,8 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: ''
+    westDoor: '',
+    inventory: []
   },
   Basement: {
     name: 'Basement',
@@ -76,7 +79,8 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: ''
+    westDoor: '',
+    inventory: []
   }
 };
 
