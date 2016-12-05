@@ -12,6 +12,8 @@ charMethods.useItem = function(item) {
   }
 };
 
+//more functionality will proably go in this method when
+//we write the click on items/weapons buttons methods
 charMethods.pickUpItem = function(item) {
   character.inventory.push(item);
 };
