@@ -1,7 +1,6 @@
 import charMethods from '../src/models/characterMethods';
 import character from '../src/models/character';
 import monsters from '../src/models/monsters';
-import gameMethods from '../src/models/gameMethods';
 
 import chai from 'chai';
 
