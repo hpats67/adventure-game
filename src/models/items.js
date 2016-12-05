@@ -2,8 +2,7 @@
 
 module.exports = [
   {
-    type: 'item',
-    name: 'banana',
+    name: 'yellow banana',
     description: 'Looks pretty tasty.',
     value: 10
   },

@@ -42,8 +42,7 @@ module.exports = [
     description: 'Looks like a family photo, but the faces are hard to make out. This was probably valuable to someone, I bet they\'d like it back.',
   },
   {
-    type: 'weapon',
-    name: 'banana',
+    name: 'green banana',
     description: 'Doesn\'t look all that tasty, it\'s still a little green.'
   },
   {
