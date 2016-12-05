@@ -1,7 +1,7 @@
 import roomMethods from '../models/roomMethods';
-import rooms from '../models/rooms';
-import itemMethods from '../models/itemMethods';
-import monsterMethods from '../models/monsterMethods';
+// import rooms from '../models/rooms';
+// import itemMethods from '../models/itemMethods';
+// import monsterMethods from '../models/monsterMethods';
 
 roomController.$inject = ['$scope'];
 

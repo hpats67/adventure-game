@@ -13,7 +13,7 @@ button {
 }
 
 html {
-  background: url(/src/images/background.jpg) no-repeat;
+  background: url(/src/images/background.jpg) center no-repeat;
   background-size: 100%;
   background-color: #2B303F;
 }
@@ -64,3 +64,23 @@ table {
   bottom: 0;
 }
 
+.inv {
+  display: inline;
+}
+
+.use-inv {
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  background: url(/src/images/invImage.png) no-repeat;
+  background-size: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.use-inv h3 {
+  position: relative;
+  bottom: -30px;
+
+}

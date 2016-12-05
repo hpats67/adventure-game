@@ -8,7 +8,6 @@ const monsterMethods = {};
 monsterMethods.get = function() {
   const pickMonster = Math.floor(Math.random() * (monsters.compendium.length + 1));
   const removedMonster = monsters.compendium.splice(pickMonster, 1);
-  monsters.active.push(removedMonster);
 
   return removedMonster[0];
 };
@@ -16,9 +15,6 @@ monsterMethods.get = function() {
 //remove from active
 //push to graveyard
 monsterMethods.bury = function(deadMonster) {
-  monsters.active = monsters.active.filter(function(el) {
-    return el.name !== deadMonster.name;
-  });
   monsters.graveyard.push(deadMonster); 
 };
 
