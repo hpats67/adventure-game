@@ -2,6 +2,8 @@ table td {
   /*border: 1px dashed cyan;*/
   min-width: 100px;
   height: 100px;
+  max-width: 100px;
+  padding: 0;
 }
 
 button {
@@ -35,6 +37,10 @@ body {
 
 table {
   position: relative;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  max-height: 300px;
   right: 0%;
   top: 50%;
   display: inline;
@@ -82,5 +88,45 @@ table {
 .use-inv h3 {
   position: relative;
   bottom: -30px;
+}
 
+#monster-id {
+  background: url(/src/images/monsterImage.png) no-repeat;
+  background-size: 100%;
+}
+
+.inv-area {
+  background: url(/src/images/invImage.png) no-repeat;
+  background-size: 100%;
+  min-width: 80px;
+  max-width: 80px;
+  min-height: 80px;
+  display: inline-block;
+}
+
+.inv-area h3 {
+  position: relative;
+  bottom: -30px;
+  margin: 0;
+}
+
+#room {
+  display: inline-block;
+  max-width: 45%;
+}
+
+#monster {
+  display: inline-block;
+  position: relative;
+  max-width: 45%;
+  clear: left;
+  left: 8%;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: darkred;
 }

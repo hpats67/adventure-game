@@ -12,9 +12,10 @@ charMethods.useItem = function(item) {
   }
 };
 
-//more functionality will probably go in this method when
-//we write the click on items/weapons buttons methods
-charMethods.pickUpItem = function(item) {
+
+charMethods.pickUpItem = function(item, currRoom) {
+  let index = currRoom.inventory.indexOf(item);
+  currRoom.inventory.splice(index, 1);
   character.inventory.push(item);
 };
 

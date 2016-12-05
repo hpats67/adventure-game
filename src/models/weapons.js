@@ -47,7 +47,7 @@ module.exports = [
   },
   {
     type: 'weapon',
-    name: 'electromagnet',
+    name: 'electro magnet',
     description: 'A neat little device, batteries, an old light switch and coils and coils of wre. When turned on it attracts screws. Might damage electronics if held too close.'
   },
 

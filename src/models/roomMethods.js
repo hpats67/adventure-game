@@ -22,13 +22,17 @@ roomMethods.addItemWeapons = function(roomObj) {
   // if an ok roll, you just get a weapon
   if (itemChance > .30) {
     randomCell = Math.floor((Math.random() * 8) + 1);
-    roomObj['roomArea' + randomCell] = weaponMethods.get();
+    const weapon = weaponMethods.get(); // returns a weapon
+    roomObj.inventory.push(weapon);
+    roomObj['roomArea' + randomCell] = weapon;
   } else if (itemChance > .75) {  // if a really good roll -- you also get an item
     randomCell = Math.abs(randomCell - 3);
     if (randomCell === 0) {
       randomCell += 1;
     }
-    roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
+    const item = itemMethods.get();  // returns an item
+    roomObj.inventory.push(item);
+    roomObj['roomArea' + randomCell] = item;
   }
   return itemChance;
 };
