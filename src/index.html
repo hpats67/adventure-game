@@ -60,9 +60,11 @@
         </div>
         <h1>Name: {{characterName}}</h1>
         <h2>Health: {{characterHealth}}</h2>
-      <!--<div ng-model="inventory" ng-repeat="item for item in inventory" ng-click="run a functions to 1)useItem(), 2) useWeapon()">
-        <h2>Inventory: {{inventory}}</h2>
-      </div>-->
+        <div ng-model="inventory" class="inv" ng-repeat="inventory in inventory">
+          <div class="use-inv" ng-click="useInv(inventory, currentRoom)"><h3>{{inventory.name}}</h3></div>
+          
+        </div>
+        <hr>
       </div>
     </div>
 
