@@ -18,7 +18,7 @@
           <h3>{{currentRoom.monster.name}}</h3>
           <p>{{currentRoom.monster.description}}</p>
         </div>
-        <div ng-repeat="item in items">
+        <div mg-model="roomInv" ng-repeat="item in roomInv">
           {{item.name}}
           <br>
           {{item.description}}
