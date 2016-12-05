@@ -8,13 +8,14 @@ const roomMethods = {};
 roomMethods.addMonster = function(roomObj) {
 // 40% chance of monster landing randomly in one cell in the room
   let monsterChance = Math.random();
-  // if (monsterChance < .40) {
-  //   let randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
-  //   while (roomObj['roomArea'+randomCell]) { // if there's something in the cell, do-over
-  //     randomCell = Math.floor((Math.random() * 9) + 1);
-  //   }
-  //   roomObj['roomArea' + randomCell] = monsterMethods.get();  // returns a monster
-  // }
+  if (monsterChance < .40) {
+    let randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
+    console.log('first randomcell', randomCell);
+    while (roomObj['roomArea'+randomCell]) { // if there's something in the cell, do-over
+      randomCell = Math.floor((Math.random() * 9) + 1);
+    }
+    roomObj['roomArea' + randomCell] = monsterMethods.get();  // returns a monster
+  }
 };
 
 roomMethods.addItemWeapons = function(roomObj) {
@@ -78,6 +79,8 @@ roomMethods.getRoom = function(currRoomObj, direction) {
     return newRoomObj;
   }
 };
+
+roomMethods.addMonster({});
 
 export default roomMethods;
 
