@@ -66,7 +66,7 @@
         <h1>Name: {{characterName}}</h1>
         <h2>Health: <span ng-class="{black: characterHealth>=100, red: characterHealth<100}">{{characterHealth}}</span></h2>
         <div ng-model="inventory" class="inv" ng-repeat="inventory in inventory">
-          <div class="use-inv" ng-click="useInv(inventory, currentRoom)"><h3>{{inventory.name}}</h3></div>
+          <div class="use-inv" ng-click="useInv(inventory, currentRoom)" title="Item: {{inventory.name}}&#013;Description:{{inventory.description}}"><h3>{{inventory.name}}</h3></div>
         </div>
         <div ng-model="graveyard" ng-repeat="graveyard in graveyard" class"grave" ng-show="end-game">
           <div class="grave"><h3>{{graveyard.name}}</h3></div>
