@@ -42,6 +42,7 @@ module.exports = [
     description: 'Looks like a family photo, but the faces are hard to make out. This was probably valuable to someone, I bet they\'d like it back.',
   },
   {
+    type: 'weapon',
     name: 'green banana',
     description: 'Doesn\'t look all that tasty, it\'s still a little green.'
   },
@@ -52,11 +53,3 @@ module.exports = [
   },
 
 ];
-
-
-
-// controller has the state that the UI needs
-// if it's more complex, you can put that in a module so your controller is lean
-// services (factories) are controllers with no ui elements
-// can get the same functionality with using the import statements
-// controller uses the modules to ask for data
