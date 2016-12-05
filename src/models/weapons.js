@@ -53,11 +53,3 @@ module.exports = [
   },
 
 ];
-
-
-
-// controller has the state that the UI needs
-// if it's more complex, you can put that in a module so your controller is lean
-// services (factories) are controllers with no ui elements
-// can get the same functionality with using the import statements
-// controller uses the modules to ask for data
