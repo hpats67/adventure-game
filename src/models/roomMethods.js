@@ -9,39 +9,31 @@ roomMethods.addMonster = function(roomObj) {
 // 40% chance of monster landing randomly in one cell in the room
   let monsterChance = Math.random();
   if (monsterChance < .40) {
-    let randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
-    console.log('first randomcell', randomCell);
-    while (roomObj['roomArea'+randomCell]) { // if there's something in the cell, do-over
-      randomCell = Math.floor((Math.random() * 9) + 1);
-    }
-    roomObj['roomArea' + randomCell] = monsterMethods.get();  // returns a monster
+    roomObj.monster = monsterMethods.get();  // returns a monster
   }
+  return monsterChance;
 };
 
 roomMethods.addItemWeapons = function(roomObj) {
-// 60% chance of item - if over 90% 2 items appear
+// 70% chance of a weapon - if over %75 an item also appears
   var randomCell;
   let itemChance = Math.random();
-  // if a really good roll -- you also get an item
-  // if (itemChance > .75) {
-  //   randomCell = Math.floor((Math.random() * 9) + 1); // between 1-9
-  //   while (roomObj['roomArea' + randomCell]) { // if there's something in the cell, do-over
-  //     randomCell = Math.floor((Math.random() * 9) + 1);
-  //   }
-  //   roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
-  // // if an ok roll, you just get a weapon
-  // } else if (itemChance > .30) {
-  //   randomCell = Math.floor((Math.random() * 9) + 1);
-  //   while (roomObj['roomArea' + randomCell]) {
-  //     randomCell = Math.floor((Math.random() * 9) + 1);
-  //   }
-  //   roomObj['roomArea' + randomCell] = weaponMethods.get();
-  // }
+
+  // if an ok roll, you just get a weapon
+  if (itemChance > .30) {
+    randomCell = Math.floor((Math.random() * 8) + 1);
+    roomObj['roomArea' + randomCell] = weaponMethods.get();
+  } else if (itemChance > .75) {  // if a really good roll -- you also get an item
+    randomCell = Math.floor((Math.random() * 8) + 1);
+    if (roomObj['roomArea' + randomCell]) {
+      randomCell = Math.abs(randomCell - 3);
+    }
+    roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
+  }
 };
 
 roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
 // link a rooms N to new room's S, etc
-
   switch (directionTraveled) {
   case 'northDoor':
     startRoom.northDoor = newRoom.name;
@@ -74,13 +66,11 @@ roomMethods.getRoom = function(currRoomObj, direction) {
     const newRoomObj = rooms[newRoomName];
     roomMethods.linkRooms(currRoomObj, newRoomObj, direction);
     // roomMethods.addItemWeapons(newRoomObj);
-    // roomMethods.addMonster(newRoomObj);
+    roomMethods.addMonster(newRoomObj);
 
     return newRoomObj;
   }
 };
-
-roomMethods.addMonster({});
 
 export default roomMethods;
 
