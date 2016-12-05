@@ -1,4 +1,4 @@
-import characterMethod from '../models/characterMethods';
+import charChange from '../models/gameMethods';
 import character from '../models/character';
 
 
@@ -15,6 +15,11 @@ export default function characterController($scope) {
       $scope.submitted = true;
     }
   };
+
+  $scope.useInv = function(item, currRoom) {
+    charChange.useInvItem(item, currRoom);
+    $scope.characterHealth = character.hp;
+  }; 
 
 
 
