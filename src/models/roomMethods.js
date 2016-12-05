@@ -25,6 +25,9 @@ roomMethods.addItemWeapons = function(roomObj) {
     roomObj['roomArea' + randomCell] = weaponMethods.get();
   } else if (itemChance > .75) {  // if a really good roll -- you also get an item
     randomCell = Math.abs(randomCell - 3);
+    if (randomCell === 0) {
+      randomCell += 1;
+    }
     roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
   }
 };
