@@ -10,7 +10,7 @@ export default function gameController($scope) {
   //when door is clicked
   $scope.changeRoom = function(currRoom, direction) {
     $scope.currentRoom = roomMethods.getRoom(currRoom, direction);
-    
+    console.log($scope.currentRoom)
   };
 
   //when inventory button is clicked
