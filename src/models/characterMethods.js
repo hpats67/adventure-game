@@ -12,6 +12,7 @@ charMethods.useItem = function(item) {
   }
 };
 
+
 charMethods.pickUpItem = function(item, currRoom) {
   let index = currRoom.inventory.indexOf(item);
   currRoom.inventory.splice(index, 1);
@@ -23,10 +24,10 @@ charMethods.deleteFromInv = function(item) {
   character.inventory.splice(index, 1);
 };
 
-charMethods.battleMonster = function(item, currRoom) {
+charMethods.battleMonster = function(weapon, currRoom) {
   //check if matches monster weakness
-  if (item.name === currRoom.monster.weakness) {
-    charMethods.deleteFromInv(item);
+  if (weapon.name === currRoom.monster.weakness) {
+    charMethods.deleteFromInv(weapon);
     monsterMethods.bury(currRoom.monster);
     currRoom.monster = false;
   }else{
