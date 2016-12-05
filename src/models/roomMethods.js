@@ -30,6 +30,7 @@ roomMethods.addItemWeapons = function(roomObj) {
     }
     roomObj['roomArea' + randomCell] = itemMethods.get();  // returns an item
   }
+  return itemChance;
 };
 
 roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
@@ -65,7 +66,7 @@ roomMethods.getRoom = function(currRoomObj, direction) {
     const newRoomName = roomArray[0];
     const newRoomObj = rooms[newRoomName];
     roomMethods.linkRooms(currRoomObj, newRoomObj, direction);
-    // roomMethods.addItemWeapons(newRoomObj);
+    roomMethods.addItemWeapons(newRoomObj);
     roomMethods.addMonster(newRoomObj);
 
     return newRoomObj;
