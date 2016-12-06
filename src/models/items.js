@@ -43,4 +43,28 @@ module.exports = [
     description: 'A glassine envelope that holds an odorless and tasteless powder.',
     value: -15
   },
+  {
+    type: 'item',
+    name: 'Apple',
+    description: 'A red apple. It looks perfect.',
+    value: -25
+  },
+  {
+    type: 'item',
+    name: 'Wooden Ring',
+    description: 'A non-descript wooden ring. At least it looks like wood and like something a kid might have made in the school woodshop.',
+    value: -5
+  },
+  {
+    type: 'item',
+    name: 'Eyeglasses',
+    description: 'Simple silver frames. Stylish, but with no lenses.',
+    value: -10
+  },
+  {
+    type: 'item',
+    name: 'Ichorous Tome',
+    description: 'A thick book bound in "animal" skin and secured by a "leather" strap. Will you take the time to read it?',
+    value: -25
+  },
 ];

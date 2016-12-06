@@ -121,8 +121,8 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Bedroom: {
-    name: 'Bedroom',
+  MasterBedroom: {
+    name: 'Master Bedroom',
     description: 'A huge Heart-shaped bed with red satin bedclothes sits alone in ' + 
     'wood-panelled room with a mirrored ceiling.',
     inventory: [],
@@ -199,8 +199,8 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Catacomb: {
-    name: 'Catacomb',
+  Catacombs: {
+    name: 'Catacombs',
     description: 'After walking through the door you notice the hallway starts leading down into the earth ' +
     'where you see grave after grave.',
     inventory: [],
@@ -291,6 +291,82 @@ const rooms = {
     southDoor: '',
     eastDoor: '',
     westDoor: ''
+  },
+  Abbatoir: {
+    name: 'Abbatoir',
+    description: 'Something about the statue of the falcon draws you in. And when you press on the left eye a section of the wall slides away revealing a small stone room filled with torture devices: an Iron Maiden, the Rack, a Water Board and a table with various clamps, pinchers, flensers and flayers. You realize it would be best not to stay in this room too long.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Sauna: {
+    name: 'Sauna',
+    description: 'A deep fog appears behind the door, but it is warm and inviting. You enter into a traditional wet sauna, wood benches along the walls and white fluffy towels on a table just inside the door. A wooden bucket of water sits next to a pile of glowing stones in the center of the room. There is no visible source of fire to heat the stones.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  SubBasement: {
+    name: 'Sub-Basement',
+    description: 'It\'s even colder, damper and somehow darker down here. Water drips steadily from the ceiling,coming ' +
+    'from everywhere and nowhere at once. Empty chests and bundles of moldy cloth line the walls, but you don\'t feel like ' +
+    'exploring given how dark it is.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  SubSubBasement: {
+    name: 'Sub-Sub-Basement',
+    description: 'A few inches of water cover the floor because water pours out of crumbling hole in the ceiling and flows toward a crack in the far corner of the cave-like room. ' +
+    'You must be really really far under the mansion now. The less time spent ' +
+    'exploring this room the better.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
   }
 };
 
@@ -303,6 +379,6 @@ rooms.notARoom = ['You stare into a void, the void stares back into you. You can
   'You start to pull the door open, but it\'s jammed. Maybe something on the other side is blocking the way?',
   'You begin to push the door in, something slams it shut against you. You cannot continue in this direction.'
 ];
-rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'ObservationTower', 'Study', 'Bedroom', 'Pantry', 'Kitchen', 'GameRoom', 'Catacomb', 'SmallBedroom', 'Sunroom', 'DiningRoom', 'Staircase'];
+rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'ObservationTower', 'Study', 'Bedroom', 'Pantry', 'Kitchen', 'GameRoom', 'Catacomb', 'SmallBedroom', 'Sunroom', 'DiningRoom', 'Staircase', 'Abbatoir', 'Sauna', 'SubBasement', 'SubSubBasement'];
 
 export default rooms;
