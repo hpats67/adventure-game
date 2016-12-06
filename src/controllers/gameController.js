@@ -11,6 +11,7 @@ gameController.$inject = ['$scope'];
 export default function gameController($scope) {
   // Initialize the game to start in the Foyer
   $scope.characterHealth = character.hp;
+  $scope.charDead = character.isDead;
   $scope.inventory = character.inventory;
   $scope.currentRoom = rooms.Foyer;
   $scope.roomInv = rooms.Foyer.inventory;
@@ -18,7 +19,13 @@ export default function gameController($scope) {
 
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
-    $scope.currentRoom = roomMethods.getRoom(currRoom, direction);
+    let newRoom = roomMethods.getRoom(currRoom, direction);
+    if (newRoom.name !== 'noMoreRooms') {
+      $scope.currentRoom = newRoom;
+    } else {
+      let message = roomMethods.getMessage();
+      alert(message);
+    }
     $scope.roomInv = $scope.currentRoom.inventory;
   };
 

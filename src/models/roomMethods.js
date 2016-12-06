@@ -65,18 +65,29 @@ roomMethods.getRoom = function(currRoomObj, direction) {
   if (currRoomObj[direction]) {
     return rooms[currRoomObj[direction]];
   } else {
-    // if no room connected, get a new room, link doors, add items and monster
-    let randNum = Math.floor((Math.random() * rooms.availableRooms.length));
-    const roomArray = rooms.availableRooms.splice(randNum, 1);   // remove the room name from the array of names
-    const newRoomName = roomArray[0];
-    const newRoomObj = rooms[newRoomName];
-    roomMethods.linkRooms(currRoomObj, newRoomObj, direction);
-    roomMethods.addItemWeapons(newRoomObj);
-    roomMethods.addMonster(newRoomObj);
-
-    return newRoomObj;
+    if (rooms.availableRooms.length > 0) {
+      // if no room connected, get a new room, link doors, add items and monster
+      let randNum = Math.floor((Math.random() * rooms.availableRooms.length));
+      const roomArray = rooms.availableRooms.splice(randNum, 1);   // remove the room name from the array of names
+      const newRoomName = roomArray[0];
+      const newRoomObj = rooms[newRoomName];
+      roomMethods.linkRooms(currRoomObj, newRoomObj, direction);
+      roomMethods.addItemWeapons(newRoomObj);
+      roomMethods.addMonster(newRoomObj);
+      return newRoomObj;
+    } else {
+      return { name: 'noMoreRooms' };
+    }
   }
 };
+
+roomMethods.getMessage = function() {
+// Returns a random message from the message array
+  let randNum = Math.floor((Math.random() * rooms.notARoom.length));
+  console.log('getMessage num', randNum);
+  return rooms.notARoom[randNum];
+};
+
 
 export default roomMethods;
 

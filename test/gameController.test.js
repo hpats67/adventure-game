@@ -4,9 +4,9 @@ const assert = chai.assert;
 
 describe.only('the gameController', () => {
 
-  beforeEach(angular.mock.module('controllers'));
-
   let $controller, $scope;
+
+  beforeEach(angular.mock.module('controllers'));
 
   beforeEach(angular.mock.inject(function($rootScope, _$controller_) {
     $scope = $rootScope.$new();
@@ -29,11 +29,13 @@ describe.only('the gameController', () => {
     $controller('gameController', { $scope });
     // The game should initialize with the first room as Foyer and full health
     assert.equal($scope.characterHealth, 100);
-    assert.deepEqual($scope.inventory, []);
+    assert.isAtMost($scope.inventory.length, 2);
     assert.deepEqual($scope.currentRoom, Foyer);
     assert.deepEqual($scope.roomInv, Foyer.inventory);
+    assert.deepEqual($scope.graveyard, []);
 
   });
+
 
   it('loads a new room', () => {
 
@@ -44,6 +46,7 @@ describe.only('the gameController', () => {
     $scope.changeRoom(Foyer, 'northDoor');
     // The new room should have a name that is _not_ Foyer
     assert.isOk($scope.currentRoom.name);
+    assert.isAtMost($scope.roomInv.length, 2);
     assert.notEqual($scope.currentRoom.name, 'Foyer');
 
   });
@@ -56,6 +59,8 @@ describe.only('the gameController', () => {
 
     $controller('gameController', { $scope });
     assert.equal($scope.characterHealth, 100);
+    assert.equal($scope.charDead, false);
+    assert.deepEqual($scope.graveyard, []);
     $scope.monsterClick(monster);
     assert.equal($scope.characterHealth, 90);
     $scope.monsterClick(monster);
@@ -63,18 +68,34 @@ describe.only('the gameController', () => {
 
   });
 
-  // it('picks up an item when item is clicked', () => {
-  //
-  //   let item = { name: 'Banana', description: 'yummy',
-  //     value: 10, type: 'item' };
-  //   let roomArea = 'roomArea1';
-  //
-  //   $controller('gameController', { $scope });
-  //   assert.deepEqual($scope.inventory, []);
-  //   $scope.itemClick(item, roomArea, Foyer);
-  //   console.log($scope.roomInv);
-  //   //assert.deepEqual($scope.roomInv, [item]);
-  //
-  // });
+
+  it('kills the character when a monster is repeatedly clicked', () => {
+
+    let monster = { name: 'Monster', description: 'Super scary monster',
+      type: 'weapon', attack: 50 };
+
+    $controller('gameController', { $scope });
+    assert.equal($scope.charDead, false);
+    $scope.monsterClick(monster);
+    $scope.monsterClick(monster);
+    assert.isAtMost($scope.characterHealth, 0);
+    assert.equal($scope.charDead, true);
+
+  });
+
+
+  it('picks up an item when item is clicked', () => {
+
+    let item = { name: 'Banana', description: 'yummy',
+      value: 10, type: 'item' };
+    let roomArea = 'roomArea1';
+
+    $controller('gameController', { $scope });
+    assert.deepEqual($scope.inventory, []);
+    $scope.itemClick(item, roomArea, Foyer);
+    console.log($scope.roomInv);
+    //assert.deepEqual($scope.roomInv, [item]);
+
+  });
 
 });

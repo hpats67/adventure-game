@@ -174,6 +174,15 @@ const rooms = {
   }
 };
 
+rooms.notARoom = ['You stare into a void, the void stares back into you. You cannot continue in this direction.',
+'Behind the door is a brick wall, you clearly cannot go this way.',
+'As you open the door and begin to take a step, a giant chasm appears below you. Grabbing the door frame, you pull barely pull yourself back in. You cannot go this way.',
+'A deep fog appears behind the door, you try to step into it but it chokes you. You frantically run to the room behind you. You cannot continue this way.',
+'The door will not open, it\'s locked and the lock is rusted.',
+'You grab the door knob and it falls off in your hand. Looks like this way is blocked to you.',
+'You start to pull the door open, but it\'s jammed. Maybe something on the other side is blocking the way?',
+'You begin to push the door in, something slams it shut against you. You cannot continue in this direction.'
+];
 rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'Observation_Tower', 'Study', 'Bedroom', 'Pantry', 'Kitchen'];
 
 export default rooms;

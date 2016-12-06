@@ -71,7 +71,7 @@ describe('Room methods', () => {
       roomArea5: {}, roomArea6: {}, roomArea7: {}, roomArea8: {},
       northDoor: '', southDoor: '', eastDoor: '', westDoor: ''};
     const monsterChance = roomMethods.addMonster(Foyer);
-    if (monsterChance < .40) {
+    if (monsterChance < .50) {
       assert.isOk(Foyer.monster, 'chance was below 40%, so monster');
     } else {
       assert.isFalse(Foyer.monster, 'chance was above 40%, so no monster');
