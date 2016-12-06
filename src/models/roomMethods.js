@@ -18,7 +18,6 @@ roomMethods.addItemWeapons = function(roomObj) {
 // 70% chance of a weapon - if over %75 an item also appears
   var randomCell;
   let itemChance = Math.random();
-  console.log(itemChance);
 
   // if an ok roll, you just get a weapon
   if (itemChance > .30) {
@@ -36,7 +35,6 @@ roomMethods.addItemWeapons = function(roomObj) {
     roomObj.inventory.push(item);
     roomObj['roomArea' + randomCell] = item;
   }
-  console.log(roomObj.inventory);
   return itemChance;
 };
 
