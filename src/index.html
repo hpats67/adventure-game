@@ -6,6 +6,7 @@
     <title>Monster Mansion</title>
   </head>
   <body>
+    <header><h1 style="text-align: center">MONSTER MANSION</h1></header>
     <div ng-controller="gameController">
       <div ng-controller="roomController">
         <div id="room">
@@ -18,10 +19,12 @@
           <h3>{{currentRoom.monster.name}}</h3>
           <p>{{currentRoom.monster.description}}</p>
         </div>
-        <div mg-model="roomInv" ng-repeat="item in roomInv">
-          {{item.name}}
+        <div mg-model="roomInv" ng-repeat="item in roomInv" class="room-inv">
+          <h3>Item:</h3>
+          <h4>{{item.name}}</h4>
           <br>
-          {{item.description}}
+          <h3>Description:</h3>
+          <p>{{item.description}}</p>
           <br>
         </div>
         <div id="doors-and-room">
@@ -63,14 +66,17 @@
         <h1>Name: {{characterName}}</h1>
         <h2>Health: <span ng-class="{black: characterHealth>=100, red: characterHealth<100}">{{characterHealth}}</span></h2>
         <div ng-model="inventory" class="inv" ng-repeat="inventory in inventory">
-          <div class="use-inv" ng-click="useInv(inventory, currentRoom)"><h3>{{inventory.name}}</h3></div>
+          <div class="use-inv" ng-click="useInv(inventory, currentRoom)" title="Item: {{inventory.name}}&#013;Description:{{inventory.description}}"><h3>{{inventory.name}}</h3></div>
         </div>
-        <div ng-model="graveyard" ng-repeat="graveyard in graveyard" class"grave" ng-show="end-game">
-          <div class="grave"><h3>{{graveyard.name}}</h3></div>
+        <div ng-show="charDead">
+          <h2>Your Kills:</h2>
+          <div ng-model="graveyard" ng-repeat="item in graveyard" class="grave-div">
+            <div class="grave"><h3>{{item.name}}</h3></div>
+          </div>
         </div>
         <hr>
       </div>
     </div>
-
+    <footer style="text-align: center"><p>Instructions can be found <a href="https://github.com/hpats67/adventure-game/blob/development/README.md">HERE</a></p></footer>
   </body>
 </html>

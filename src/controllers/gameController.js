@@ -3,6 +3,7 @@ import rooms from '../models/rooms';
 import gameMethods from '../models/gameMethods';
 import charMethods from '../models/characterMethods';
 import character from '../models/character';
+import monsters from '../models/monsters';
 
 gameController.$inject = ['$scope'];
 
@@ -12,16 +13,20 @@ export default function gameController($scope) {
   $scope.inventory = character.inventory;
   $scope.currentRoom = rooms.Foyer;
   $scope.roomInv = rooms.Foyer.inventory;
+  $scope.graveyard = monsters.graveyard;
 
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
     $scope.currentRoom = roomMethods.getRoom(currRoom, direction);
+    $scope.roomInv = $scope.currentRoom.inventory;
   };
 
   // If user clicks monster
   $scope.monsterClick = function(monster) {
     gameMethods.hurtCharacter(monster);
     $scope.characterHealth = character.hp;
+    $scope.charDead = character.isDead;
+    $scope.graveyard = monsters.graveyard;
   };
 
   // On item in room click
