@@ -51,7 +51,8 @@ describe.only('the gameController', () => {
 
   it('hurts the character when a monster is clicked', () => {
 
-    let monster = { name: 'Monster', description: 'Super scary monster', attack: 10 };
+    let monster = { name: 'Monster', description: 'Super scary monster',
+      type: 'weapon', attack: 10 };
 
     $controller('gameController', { $scope });
     assert.equal($scope.characterHealth, 100);
@@ -62,5 +63,18 @@ describe.only('the gameController', () => {
 
   });
 
+  // it('picks up an item when item is clicked', () => {
+  //
+  //   let item = { name: 'Banana', description: 'yummy',
+  //     value: 10, type: 'item' };
+  //   let roomArea = 'roomArea1';
+  //
+  //   $controller('gameController', { $scope });
+  //   assert.deepEqual($scope.inventory, []);
+  //   $scope.itemClick(item, roomArea, Foyer);
+  //   console.log($scope.roomInv);
+  //   //assert.deepEqual($scope.roomInv, [item]);
+  //
+  // });
 
 });
