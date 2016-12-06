@@ -11,6 +11,7 @@ gameController.$inject = ['$scope'];
 export default function gameController($scope) {
   // Initialize the game to start in the Foyer
   $scope.characterHealth = character.hp;
+  $scope.charDead = character.isDead;
   $scope.inventory = character.inventory;
   $scope.currentRoom = rooms.Foyer;
   $scope.roomInv = rooms.Foyer.inventory;
