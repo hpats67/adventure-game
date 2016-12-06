@@ -27,10 +27,10 @@ charMethods.deleteFromInv = function(item) {
 charMethods.battleMonster = function(weapon, currRoom) {
   //check if matches monster weakness
   if (weapon.name === currRoom.monster.weakness) {
+    alert(`You killed ${currRoom.monster.name}!`);
     charMethods.deleteFromInv(weapon);
     monsterMethods.bury(currRoom.monster);
     currRoom.monster = false;
-    alert(`You killed ${currRoom.monster}!`);
   }else{
     gameMethods.hurtCharacter(currRoom.monster);
   }

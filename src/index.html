@@ -68,12 +68,15 @@
         <div ng-model="inventory" class="inv" ng-repeat="inventory in inventory">
           <div class="use-inv" ng-click="useInv(inventory, currentRoom)" title="Item: {{inventory.name}}&#013;Description:{{inventory.description}}"><h3>{{inventory.name}}</h3></div>
         </div>
-        <div ng-model="graveyard" ng-repeat="graveyard in graveyard" class"grave" ng-show="end-game">
-          <div class="grave"><h3>{{graveyard.name}}</h3></div>
+        <div ng-show="charDead">
+          <h2>Your Kills:</h2>
+          <div ng-model="graveyard" ng-repeat="item in graveyard" class="grave-div">
+            <div class="grave"><h3>{{item.name}}</h3></div>
+          </div>
         </div>
         <hr>
       </div>
     </div>
-
+    <footer style="text-align: center"><p>Instructions can be found <a href="https://github.com/hpats67/adventure-game/blob/development/README.md">HERE</a></p></footer>
   </body>
 </html>

@@ -123,6 +123,7 @@ button h1 {
   max-width: 80px;
   min-height: 80px;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .inv-area h3 {
@@ -153,4 +154,25 @@ button h1 {
 
 .red {
   color: darkred;
+}
+
+.grave-div {
+  display: inline-block;
+  clear: left;
+
+}
+
+.grave {
+  background: url(/src/images/grave.png) no-repeat;
+  background-size: 100%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.grave h3 {
+  color: black;
+  padding-top: 25px;
 }
