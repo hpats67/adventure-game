@@ -14,11 +14,6 @@
           <h3>{{currentRoom.name}}</h3>
           <p>{{currentRoom.description}}</p>
         </div>
-        <div id="monster">
-          <h2 ng-show="currentRoom.monster.name">A monster appears! </h2>
-          <h3>{{currentRoom.monster.name}}</h3>
-          <p>{{currentRoom.monster.description}}</p>
-        </div>
         <div mg-model="roomInv" ng-repeat="item in roomInv" class="room-inv">
           <h3>Item:</h3>
           <h4>{{item.name}}</h4>
@@ -26,6 +21,11 @@
           <h3>Description:</h3>
           <p>{{item.description}}</p>
           <br>
+        </div>
+        <div id="monster">
+          <h2 ng-show="currentRoom.monster.name">A monster appears! </h2>
+          <h3>{{currentRoom.monster.name}}</h3>
+          <p>{{currentRoom.monster.description}}</p>
         </div>
         <div id="doors-and-room">
         <!-- and how do we populate the table and then buttons in the table? -->
