@@ -19,7 +19,7 @@ export default function characterController($scope) {
   $scope.useInv = function(item, currRoom) {
     charChange.useInvItem(item, currRoom);
     $scope.$parent.characterHealth = character.hp;
-    $scope.$parent.charDeath = character.isDead;
+    $scope.$parent.charDead = character.isDead;
     $scope.$parent.graveyard = monster.graveyard;
   }; 
 

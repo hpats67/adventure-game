@@ -3,52 +3,52 @@
 module.exports = [
   {
     type: 'weapon',
-    name: 'torch',
+    name: 'Torch',
     description: 'This seems handy for getting around in dark damp places! Careful not to burn yourself.',
   },
   {
     type: 'weapon',
-    name: 'salt shaker',
+    name: 'Salt Shaker',
     description: 'Standard glass shaker, with some salt and rice in it. Might be useful in a fight.',
   },
   {
     type: 'weapon',
-    name: 'catnip sachet',
+    name: 'Catnip Sachet',
     description: 'Smells a little minty and herby. A kitty would love this.',
   },
   {
     type: 'weapon',
-    name: 'golden carrot',
+    name: 'Golden Carrot',
     description: 'A heavy, golden carrot. Definitely not edible, possibly valuable if it\'s real gold.',
   },
   {
     type: 'weapon',
-    name: 'bucket of stagnant water',
+    name: 'Bucket of Stagnant Water',
     description: 'Has a slight greenish-brown tinge, it\'s pretty gross. Someone should toss it out.',
   },
   {
     type: 'weapon',
-    name: 'meat tenderizer',
+    name: 'Meat Tenderizer',
     description: 'Small metal tin with meat tenderizer. Might be useful at a BBQ.',
   },
   {
     type: 'weapon',
-    name: 'caterpillar charm',
+    name: 'Caterpillar Charm',
     description: 'A pretty little charm of a many-legged green caterpillar. Looks like it\'s from a little girl\'s bracelet.',
   },
   {
     type: 'weapon',
-    name: 'tattered tintype',
+    name: 'Tattered Tintype',
     description: 'Looks like a family photo, but the faces are hard to make out. This was probably valuable to someone, I bet they\'d like it back.',
   },
   {
     type: 'weapon',
-    name: 'green banana',
+    name: 'Green Banana',
     description: 'Doesn\'t look all that tasty, it\'s still a little green.'
   },
   {
     type: 'weapon',
-    name: 'electro magnet',
+    name: 'Electro Magnet',
     description: 'A neat little device, batteries, an old light switch and coils and coils of wre. When turned on it attracts screws. Might damage electronics if held too close.'
   },
 
