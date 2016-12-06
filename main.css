@@ -32,8 +32,9 @@ body {
 
 .room-inv {
   display: inline-block;
-  max-width: 45%;
+  max-width: 20%;
   padding: 1rem;
+  vertical-align: top;
 }
 
 .room-inv h2, h3, h4, p {
@@ -140,12 +141,9 @@ button h1 {
 }
 
 #monster {
-  display: inline-block;
-  position: relative;
   max-width: 40%;
   padding: 1rem;
-  clear: left;
-  left: 8%;
+  margin: auto;
 }
 
 .black {

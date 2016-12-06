@@ -75,6 +75,6 @@ monsters.compendium = [
 ];
 
 
-monsters.graveyard =[{name: 'monster'}, {name: 'monster'}];
+monsters.graveyard =[];
 
 export default monsters;
