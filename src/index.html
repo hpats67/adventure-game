@@ -8,56 +8,60 @@
   <body>
     <header><h1 style="text-align: center">MONSTER MANSION</h1></header>
     <div ng-controller="gameController">
-      <div ng-controller="roomController">
-        <div id="room">
-          <h2>You have now entered:</h2>
-          <h3>{{currentRoom.name}}</h3>
-          <p>{{currentRoom.description}}</p>
-        </div>
-        <div mg-model="roomInv" ng-repeat="item in roomInv" class="room-inv">
-          <h3>Item:</h3>
-          <h4>{{item.name}}</h4>
-          <br>
-          <h3>Description:</h3>
-          <p>{{item.description}}</p>
-          <br>
-        </div>
-        <div id="monster">
-          <h2 ng-show="currentRoom.monster.name">A monster appears! </h2>
-          <h3>{{currentRoom.monster.name}}</h3>
-          <p>{{currentRoom.monster.description}}</p>
-        </div>
-        <div id="doors-and-room">
-        <!-- and how do we populate the table and then buttons in the table? -->
-          <div id="northButton"><button ng-click="changeRoom(currentRoom, 'northDoor')"><h1>N</h1></button></div>
-          <div id="westButton"><button ng-click="changeRoom(currentRoom, 'westDoor')"><h1>W</h1></button></button></div>
-            <table> <!-- clickable images for each room hide and show go here-->
-              <tr>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea1.name" ng-click="itemClick(currentRoom.roomArea1, 'roomArea1', currentRoom)"><h3>{{currentRoom.roomArea1.name}}</h3></div></td>
-                <td><div class="inv-area"  ng-show="currentRoom.roomArea2.name" ng-click="itemClick(currentRoom.roomArea2, 'roomArea2', currentRoom)"><h3>{{currentRoom.roomArea2.name}}</h3></div></td>
-                <td><div class="inv-area"  ng-show="currentRoom.roomArea3.name" ng-click="itemClick(currentRoom.roomArea3, 'roomArea3', currentRoom)"><h3>{{currentRoom.roomArea3.name}}</h3></div></td>
-              </tr>
+      <!-- ng-hide for initialization to force submitting a name -->
+      <div ng-hide="submitted">
+        <!-- ng-hide added to end game after character dies -->
+        <div ng-controller="roomController" ng-hide="charDead">
+          <div id="room">
+            <h2>You have now entered:</h2>
+            <h3>{{currentRoom.name}}</h3>
+            <p>{{currentRoom.description}}</p>
+          </div>
+          <div mg-model="roomInv" ng-repeat="item in roomInv" class="room-inv">
+            <h3>Item:</h3>
+            <h4>{{item.name}}</h4>
+            <br>
+            <h3>Description:</h3>
+            <p>{{item.description}}</p>
+            <br>
+          </div>
+          <div id="monster">
+            <h2 ng-show="currentRoom.monster.name">A monster appears! </h2>
+            <h3>{{currentRoom.monster.name}}</h3>
+            <p>{{currentRoom.monster.description}}</p>
+          </div>
+          <div id="doors-and-room">
+            <div id="northButton"><button ng-click="changeRoom(currentRoom, 'northDoor')"><h1>N</h1></button></div>
+            <div id="westButton"><button ng-click="changeRoom(currentRoom, 'westDoor')"><h1>W</h1></button></button></div>
+              <table> 
+                <tr>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea1.name" ng-click="itemClick(currentRoom.roomArea1, 'roomArea1', currentRoom)"><h3>{{currentRoom.roomArea1.name}}</h3></div></td>
+                  <td><div class="inv-area"  ng-show="currentRoom.roomArea2.name" ng-click="itemClick(currentRoom.roomArea2, 'roomArea2', currentRoom)"><h3>{{currentRoom.roomArea2.name}}</h3></div></td>
+                  <td><div class="inv-area"  ng-show="currentRoom.roomArea3.name" ng-click="itemClick(currentRoom.roomArea3, 'roomArea3', currentRoom)"><h3>{{currentRoom.roomArea3.name}}</h3></div></td>
+                </tr>
 
-              <tr>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea4.name" ng-click="itemClick(currentRoom.roomArea4, 'roomArea4', currentRoom)"><h3>{{currentRoom.roomArea4.name}}</h3></div></td>
-                <td id="monster-id" ng-show="currentRoom.monster.name" ng-click="monsterClick(currentRoom.monster)"></td>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea5.name" ng-click="itemClick(currentRoom.roomArea5, 'roomArea5', currentRoom)"><h3>{{currentRoom.roomArea5.name}}</h3></div></td>
-              </tr>
+                <tr>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea4.name" ng-click="itemClick(currentRoom.roomArea4, 'roomArea4', currentRoom)"><h3>{{currentRoom.roomArea4.name}}</h3></div></td>
+                  <td id="monster-id" ng-show="currentRoom.monster.name" ng-click="monsterClick(currentRoom.monster)"></td>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea5.name" ng-click="itemClick(currentRoom.roomArea5, 'roomArea5', currentRoom)"><h3>{{currentRoom.roomArea5.name}}</h3></div></td>
+                </tr>
 
-              <tr>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea6.name" ng-click="itemClick(currentRoom.roomArea6, 'roomArea6', currentRoom)"><h3>{{currentRoom.roomArea6.name}}</h3></div></td>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea7.name" ng-click="itemClick(currentRoom.roomArea7, 'roomArea7', currentRoom)"><h3>{{currentRoom.roomArea7.name}}</h3></div></td>
-                <td><div class="inv-area" ng-show="currentRoom.roomArea8.name" ng-click="itemClick(currentRoom.roomArea8, 'roomArea8', currentRoom)"><h3>{{currentRoom.roomArea8.name}}</h3></div></td>
-              </tr>
-            </table>
-          <div id="eastButton"><button ng-click="changeRoom(currentRoom, 'eastDoor')"><h1>E</h1></button></div>
-          <div id="southButton"><button ng-click="changeRoom(currentRoom, 'southDoor')"><h1>S</h1></button></div>
+                <tr>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea6.name" ng-click="itemClick(currentRoom.roomArea6, 'roomArea6', currentRoom)"><h3>{{currentRoom.roomArea6.name}}</h3></div></td>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea7.name" ng-click="itemClick(currentRoom.roomArea7, 'roomArea7', currentRoom)"><h3>{{currentRoom.roomArea7.name}}</h3></div></td>
+                  <td><div class="inv-area" ng-show="currentRoom.roomArea8.name" ng-click="itemClick(currentRoom.roomArea8, 'roomArea8', currentRoom)"><h3>{{currentRoom.roomArea8.name}}</h3></div></td>
+                </tr>
+              </table>
+            <div id="eastButton"><button ng-click="changeRoom(currentRoom, 'eastDoor')"><h1>E</h1></button></div>
+            <div id="southButton"><button ng-click="changeRoom(currentRoom, 'southDoor')"><h1>S</h1></button></div>
+          </div>
         </div>
       </div>
 
+
       <!-- is this ng-model="character"? -->
       <div ng-controller="characterController">
-        <div ng-hide="submitted">
+        <div ng-show="submitted">
           <form ng-submit="changeName()">
           <h3>Enter your NAME:</h3>
           <input type="text" ng-model="text">
