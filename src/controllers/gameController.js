@@ -18,7 +18,13 @@ export default function gameController($scope) {
 
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
-    $scope.currentRoom = roomMethods.getRoom(currRoom, direction);
+    let newRoom = roomMethods.getRoom(currRoom, direction);
+    if (newRoom.name !== 'noMoreRooms') {
+      $scope.currentRoom = newRoom;
+    } else {
+      let message = roomMethods.getMessage();
+      alert(message);
+    }
     $scope.roomInv = $scope.currentRoom.inventory;
   };
 
