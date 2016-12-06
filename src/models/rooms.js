@@ -20,7 +20,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Hallway: {
     name: 'Hallway',
@@ -39,7 +39,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Ballroom: {
     name: 'Ballroom',
@@ -60,7 +60,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Basement: {
     name: 'Basement',
@@ -80,7 +80,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Observation_Tower: {
     name: 'Observation Tower',
@@ -98,7 +98,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Study: {
     name: 'Study',
@@ -116,7 +116,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Bedroom: {
     name: 'Bedroom',
@@ -134,7 +134,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Kitchen: {
     name: 'Kitchen',
@@ -152,7 +152,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   },
   Pantry: {
     name: 'Pantry',
@@ -170,7 +170,7 @@ const rooms = {
     northDoor: '',
     southDoor: '',
     eastDoor: '',
-    westDoor: '',
+    westDoor: ''
   }
 };
 
