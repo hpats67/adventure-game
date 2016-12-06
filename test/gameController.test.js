@@ -49,4 +49,18 @@ describe.only('the gameController', () => {
   });
 
 
+  it('hurts the character when a monster is clicked', () => {
+
+    let monster = { name: 'Monster', description: 'Super scary monster', attack: 10 };
+
+    $controller('gameController', { $scope });
+    assert.equal($scope.characterHealth, 100);
+    $scope.monsterClick(monster);
+    assert.equal($scope.characterHealth, 90);
+    $scope.monsterClick(monster);
+    assert.equal($scope.characterHealth, 80);
+
+  });
+
+
 });
