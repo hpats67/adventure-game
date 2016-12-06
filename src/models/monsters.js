@@ -68,13 +68,13 @@ monsters.compendium = [
     type: 'monster',
     name: 'Harvey the Hacker',
     description: 'A dorky looking kid with a mishapen afro, saucony running shoes and a laptop.',
-    weakness: 'electromagnet',
+    weakness: 'electro magnet',
     attack: 5
   },
   
 ];
 
 
-monsters.graveyard =[];
+monsters.graveyard =[{name: 'monster'}, {name: 'monster'}];
 
 export default monsters;
