@@ -6,9 +6,9 @@ import weaponMethods from './weaponMethods';
 const roomMethods = {};
 
 roomMethods.addMonster = function(roomObj) {
-// 40% chance of monster landing randomly in one cell in the room
+// 60% chance of monster landing randomly in one cell in the room
   let monsterChance = Math.random();
-  if (monsterChance < .40) {
+  if (monsterChance < .60) {
     roomObj.monster = monsterMethods.get();  // returns a monster
   }
   return monsterChance;

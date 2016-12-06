@@ -141,6 +141,7 @@ button h1 {
 }
 
 #monster {
+  display: block;
   max-width: 40%;
   padding: 1rem;
   margin: auto;
