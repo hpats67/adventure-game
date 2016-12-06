@@ -8,6 +8,7 @@
   <body>
     <header><h1 style="text-align: center">MONSTER MANSION</h1></header>
     <div ng-controller="gameController">
+      <!-- ng-hide for initialization to force submitting a name -->
       <div ng-hide="submitted">
         <div ng-controller="roomController" ng-hide="charDead">
           <div id="room">
