@@ -16,6 +16,7 @@ export default function gameController($scope) {
   $scope.currentRoom = rooms.Foyer;
   $scope.roomInv = rooms.Foyer.inventory;
   $scope.graveyard = monsters.graveyard;
+  $scope.submitted = true;
 
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
