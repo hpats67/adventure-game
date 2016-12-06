@@ -29,7 +29,6 @@ export default function gameController($scope) {
       alert(message);
     }
     $scope.roomInv = $scope.currentRoom.inventory;
-    console.log($scope.roomInv);
   };
 
   // If user clicks monster
