@@ -329,7 +329,7 @@ const rooms = {
     westDoor: ''
   },
   SubBasement: {
-    name: 'Sub-Basement',
+    name: 'SubBasement',
     description: 'It\'s even colder, damper and somehow darker down here. Water drips steadily from the ceiling,coming ' +
     'from everywhere and nowhere at once. Empty chests and bundles of moldy cloth line the walls, but you don\'t feel like ' +
     'exploring given how dark it is.',
@@ -349,7 +349,7 @@ const rooms = {
     westDoor: ''
   },
   SubSubBasement: {
-    name: 'Sub-Sub-Basement',
+    name: 'SubSubBasement',
     description: 'A few inches of water cover the floor because water pours out of crumbling hole in the ceiling and flows toward a crack in the far corner of the cave-like room. ' +
     'You must be really really far under the mansion now. The less time spent ' +
     'exploring this room the better.',
