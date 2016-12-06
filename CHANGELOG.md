@@ -5,7 +5,7 @@ Format based on Keep a Changelog (http://keepachangelog.com/)
 and project adheres to Semantic Versioning (http://semver.org).
 
 
-## [1.0.0] - 2016-12-07
+## [1.0.0] - 2016-12-06
 ### Changed
 - reached mvp functionality
 
