@@ -82,7 +82,7 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Observation_Tower: {
+  ObservationTower: {
     name: 'Observation Tower',
     description: 'The door leads to a spiral stairway that winds up and up and up to a room with a ' + 
     'glass ceiling and lots of windows. Each window looks out onto a very very different landscape...',
@@ -179,7 +179,7 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Game_Room: {
+  GameRoom: {
     name: 'Game Room',
     description: 'You enter a room that appers to be filled with trophies of all sorts, from stuffed animals to ' +
     'marksman awards, to mounted heads. You notice the lights give off weird shadows, and out of the corner of your ' +
@@ -218,7 +218,7 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Small_Bedroom: {
+  SmallBedroom: {
     name: 'Small Bedroom',
     description: 'You enter a bedroom with a small cot, a dresser, and a closet, is there anything around you?',
     inventory: [],
@@ -255,7 +255,7 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Dining_Room: {
+  DiningRoom: {
     name: 'Dining Room',
     description: 'As you take in the room you see many things that could possibly hold treasures of the imagination ' +
     'there is a dining room table, cabinets, and what appears to be a corner that is strangley cover in shadows.',
@@ -303,6 +303,6 @@ rooms.notARoom = ['You stare into a void, the void stares back into you. You can
   'You start to pull the door open, but it\'s jammed. Maybe something on the other side is blocking the way?',
   'You begin to push the door in, something slams it shut against you. You cannot continue in this direction.'
 ];
-rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'Observation_Tower', 'Study', 'Bedroom', 'Pantry', 'Kitchen', 'Game_Room', 'Catacomb', 'Small_Bedroom', 'Sunroom', 'Dining_Room', 'Staircase'];
+rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'ObservationTower', 'Study', 'Bedroom', 'Pantry', 'Kitchen', 'GameRoom', 'Catacomb', 'SmallBedroom', 'Sunroom', 'DiningRoom', 'Staircase'];
 
 export default rooms;

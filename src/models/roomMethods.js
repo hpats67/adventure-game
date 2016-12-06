@@ -42,20 +42,20 @@ roomMethods.linkRooms = function(startRoom, newRoom, directionTraveled) {
 // link a rooms N to new room's S, etc
   switch (directionTraveled) {
   case 'northDoor':
-    startRoom.northDoor = newRoom.name;
-    newRoom.southDoor = startRoom.name;
+    startRoom.northDoor = newRoom.name.replace(' ', '');
+    newRoom.southDoor = startRoom.name.replace(' ', '');
     break;
   case 'southDoor':
-    startRoom.southDoor = newRoom.name;
-    newRoom.northDoor = startRoom.name;
+    startRoom.southDoor = newRoom.name.replace(' ', '');
+    newRoom.northDoor = startRoom.name.replace(' ', '');
     break;
   case 'eastDoor':
-    startRoom.eastDoor = newRoom.name;
-    newRoom.westDoor = startRoom.name;
+    startRoom.eastDoor = newRoom.name.replace(' ', '');
+    newRoom.westDoor = startRoom.name.replace(' ', '');
     break;
   case 'westDoor':
-    startRoom.westDoor = newRoom.name;
-    newRoom.eastDoor = startRoom.name;
+    startRoom.westDoor = newRoom.name.replace(' ', '');
+    newRoom.eastDoor = startRoom.name.replace(' ', '');
     break;
   }
 };
