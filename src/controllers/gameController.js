@@ -30,7 +30,7 @@ export default function gameController($scope) {
   };
 
   // If user clicks monster
-  $scope.monsterClick = function(monster    ) {
+  $scope.monsterClick = function(monster) {
     gameMethods.hurtCharacter(monster);
     $scope.characterHealth = character.hp;
     $scope.charDead = character.isDead;
