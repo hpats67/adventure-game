@@ -7,7 +7,6 @@ import room from './roomController';
 const controllers = angular.module('controllers', []);
 
 controllers.controller('roomController', room);
-
 controllers.controller('gameController', game);
 controllers.controller('characterController', character);
 
