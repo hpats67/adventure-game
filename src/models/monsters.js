@@ -61,7 +61,7 @@ monsters.compendium = [
     type: 'monster',
     name: 'Megilla Gorilla',
     description: 'A 8 foot tall gorilla with a monocle gibbers and scratches itself. Everytime you move it does a back flip.',
-    weakness: 'banana',
+    weakness: 'green banana',
     attack: 25
   },
   {
