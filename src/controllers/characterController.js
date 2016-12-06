@@ -6,12 +6,12 @@ import monster from '../models/monsters';
 characterController.$inject = ['$scope'];
 
 export default function characterController($scope) {
-  $scope.characterName = character.name;
-  $scope.graveyard = monster.graveyard;
+  $scope.$parent.characterName = character.name;
+  $scope.$parent.graveyard = monster.graveyard;
 
   $scope.changeName = function() {
     if($scope.text) {
-      $scope.characterName = $scope.text;
+      $scope.$parent.characterName = $scope.text;
       $scope.submitted = true;
     }
   };
@@ -19,8 +19,8 @@ export default function characterController($scope) {
   $scope.useInv = function(item, currRoom) {
     charChange.useInvItem(item, currRoom);
     $scope.$parent.characterHealth = character.hp;
-    $scope.charDeath = character.isDead;
-    $scope.graveyard = monster.graveyard;
+    $scope.$parent.charDeath = character.isDead;
+    $scope.$parent.graveyard = monster.graveyard;
   }; 
 
 }
