@@ -12,7 +12,7 @@ export default function characterController($scope) {
   $scope.changeName = function() {
     if($scope.text) {
       $scope.$parent.characterName = $scope.text;
-      $scope.submitted = true;
+      $scope.$parent.submitted = false;
     }
   };
 

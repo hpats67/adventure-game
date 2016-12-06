@@ -84,7 +84,8 @@ const rooms = {
   },
   Observation_Tower: {
     name: 'Observation Tower',
-    description: 'The door leads to a spiral stairway that winds up and up and up to a room with a glass ceiling and lots of windows. Each window looks out onto a very very different landscape...',
+    description: 'The door leads to a spiral stairway that winds up and up and up to a room with a ' + 
+    'glass ceiling and lots of windows. Each window looks out onto a very very different landscape...',
     inventory: [],
     monster: false,
     roomArea1: {},
@@ -102,7 +103,9 @@ const rooms = {
   },
   Study: {
     name: 'Study',
-    description: 'Shelves, shelves and more shelves. Books, books and more books. Where there aren\'t shelves there are tables covered with books, charts, maps and graphs. A well-used room for research on esoteric subjects.',
+    description: 'Shelves, shelves and more shelves. Books, books and more books. Where there aren\'t ' + 
+    'shelves there are tables covered with books, charts, maps and graphs. A well-used room for ' + 
+    'research on esoteric subjects.',
     inventory: [],
     monster: false,
     roomArea1: {},
@@ -120,7 +123,8 @@ const rooms = {
   },
   Bedroom: {
     name: 'Bedroom',
-    description: 'A huge Heart-shaped bed with red satin bedclothes sits alone in wood-panelled room with a mirrored ceiling.',
+    description: 'A huge Heart-shaped bed with red satin bedclothes sits alone in ' + 
+    'wood-panelled room with a mirrored ceiling.',
     inventory: [],
     monster: false,
     roomArea1: {},
@@ -138,7 +142,9 @@ const rooms = {
   },
   Kitchen: {
     name: 'Kitchen',
-    description: 'Smells of food waft out the moment you open the door. A large fireplace stands in one corner, a sink in the other. The center is a huge island with grills, built-in ovens and pots and pans hanging above it.',
+    description: 'Smells of food waft out the moment you open the door. A large fireplace stands ' + 
+    'in one corner, a sink in the other. The center is a huge island with grills, ' + 
+    'built-in ovens and pots and pans hanging above it.',
     inventory: [],
     monster: false,
     roomArea1: {},
@@ -156,7 +162,121 @@ const rooms = {
   },
   Pantry: {
     name: 'Pantry',
-    description: 'Shelves with various boxes, cans and jars. Indiscriminate meat chunks hangs from hooks on the ceiling,a sweet smell slightly rancid smell permeates the small, dark room.',
+    description: 'Shelves with various boxes, cans and jars. Indiscriminate meat chunks hangs ' + 
+    'from hooks on the ceiling,a sweet smell slightly rancid smell permeates the small, dark room.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Game_Room: {
+    name: 'Game Room',
+    description: 'You enter a room that appers to be filled with trophies of all sorts, from stuffed animals to ' +
+    'marksman awards, to mounted heads. You notice the lights give off weird shadows, and out of the corner of your ' +
+    'eye you notice something moving, was it a shadow, or something else?',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Catacomb: {
+    name: 'Catacomb',
+    description: 'After walking through the door you notice the hallway starts leading down into the earth ' +
+    'where you see grave after grave.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Bedroom2: {
+    name: 'Small Bedroom',
+    description: 'You enter a bedroom with a small cot, a dresser, and a closet, is there anything around you?',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Sunroom: {
+    name: 'Sunroom',
+    description: 'You enter an empty room that is surrounded by windows to the outside, but as you look into the windows ' +
+    'you realize that it is not night but just empty darkness, a void of nothingness.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Dining_Room: {
+    name: 'Dining Room',
+    description: 'As you take in the room you see many things that could possibly hold treasures of the imagination ' +
+    'there is a dining room table, cabinets, and what appears to be a corner that is strangley cover in shadows.',
+    inventory: [],
+    monster: false,
+    roomArea1: {},
+    roomArea2: {},
+    roomArea3: {},
+    roomArea4: {},
+    roomArea5: {},
+    roomArea6: {},
+    roomArea7: {},
+    roomArea8: {},
+    northDoor: '',
+    southDoor: '',
+    eastDoor: '',
+    westDoor: ''
+  },
+  Staircase: {
+    name: 'Staircase',
+    description: 'The door you opened leads to a stair case that appears to keep rising and rising. All that you see as you ascend is more steps.',
     inventory: [],
     monster: false,
     roomArea1: {},
@@ -183,6 +303,6 @@ rooms.notARoom = ['You stare into a void, the void stares back into you. You can
   'You start to pull the door open, but it\'s jammed. Maybe something on the other side is blocking the way?',
   'You begin to push the door in, something slams it shut against you. You cannot continue in this direction.'
 ];
-rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'Observation_Tower', 'Study', 'Bedroom', 'Pantry', 'Kitchen'];
+rooms.availableRooms = ['Hallway', 'Ballroom', 'Basement', 'Observation_Tower', 'Study', 'Bedroom', 'Pantry', 'Kitchen', 'Game_Room', 'Catacomb', 'Small_Bedroom', 'Sunroom', 'Dining_Room', 'Staircase'];
 
 export default rooms;
