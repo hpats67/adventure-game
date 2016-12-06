@@ -218,7 +218,7 @@ const rooms = {
     eastDoor: '',
     westDoor: ''
   },
-  Bedroom2: {
+  Small_Bedroom: {
     name: 'Small Bedroom',
     description: 'You enter a bedroom with a small cot, a dresser, and a closet, is there anything around you?',
     inventory: [],

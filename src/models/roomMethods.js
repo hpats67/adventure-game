@@ -84,7 +84,6 @@ roomMethods.getRoom = function(currRoomObj, direction) {
 roomMethods.getMessage = function() {
 // Returns a random message from the message array
   let randNum = Math.floor((Math.random() * rooms.notARoom.length));
-  console.log('getMessage num', randNum);
   return rooms.notARoom[randNum];
 };
 

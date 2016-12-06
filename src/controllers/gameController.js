@@ -20,6 +20,7 @@ export default function gameController($scope) {
 
   // On door click
   $scope.changeRoom = function(currRoom, direction) {
+
     let newRoom = roomMethods.getRoom(currRoom, direction);
     if (newRoom.name !== 'noMoreRooms') {
       $scope.currentRoom = newRoom;
@@ -28,6 +29,7 @@ export default function gameController($scope) {
       alert(message);
     }
     $scope.roomInv = $scope.currentRoom.inventory;
+    console.log($scope.roomInv);
   };
 
   // If user clicks monster
