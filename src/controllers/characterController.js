@@ -1,6 +1,6 @@
 import charChange from '../models/gameMethods';
-import character from '../models/character';
-import monster from '../models/monsters';
+import character from '../data/character';
+import monster from '../data/monsters';
 
 
 characterController.$inject = ['$scope'];
