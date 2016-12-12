@@ -1,5 +1,5 @@
 import weaponMethods from '../src/models/weaponMethods';
-import weapons from '../src/models/weapons';
+import weapons from '../src/data/weapons';
 
 import chai from 'chai';
 const assert = chai.assert;
