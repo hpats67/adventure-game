@@ -8,6 +8,7 @@
   <body>
     <header><h1 style="text-align: center">MONSTER MANSION</h1></header>
     <div ng-controller="gameController">
+      <!-- ng-hide for initialization to force submitting a name -->
       <div ng-hide="submitted">
         <div ng-hide="charDead">
           <div id="room">
@@ -29,10 +30,9 @@
             <p>{{currentRoom.monster.description}}</p>
           </div>
           <div id="doors-and-room">
-          <!-- and how do we populate the table and then buttons in the table? -->
             <div id="northButton"><button ng-click="changeRoom(currentRoom, 'northDoor')"><h1>N</h1></button></div>
             <div id="westButton"><button ng-click="changeRoom(currentRoom, 'westDoor')"><h1>W</h1></button></button></div>
-              <table> <!-- clickable images for each room hide and show go here-->
+              <table> 
                 <tr>
                   <td><div class="inv-area" ng-show="currentRoom.roomArea1.name" ng-click="itemClick(currentRoom.roomArea1, 'roomArea1', currentRoom)"><h3>{{currentRoom.roomArea1.name}}</h3></div></td>
                   <td><div class="inv-area"  ng-show="currentRoom.roomArea2.name" ng-click="itemClick(currentRoom.roomArea2, 'roomArea2', currentRoom)"><h3>{{currentRoom.roomArea2.name}}</h3></div></td>
