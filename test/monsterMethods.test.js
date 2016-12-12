@@ -1,5 +1,5 @@
 import monsterMethods from '../src/models/monsterMethods';
-import monsters from '../src/models/monsters';
+import monsters from '../src/data/monsters';
 
 import chai from 'chai';
 
