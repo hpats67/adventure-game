@@ -10,8 +10,7 @@
     <div ng-controller="gameController">
       <!-- ng-hide for initialization to force submitting a name -->
       <div ng-hide="submitted">
-        <!-- ng-hide added to end game after character dies -->
-        <div ng-controller="roomController" ng-hide="charDead">
+        <div ng-hide="charDead">
           <div id="room">
             <h2>You have now entered:</h2>
             <h3>{{currentRoom.name}}</h3>

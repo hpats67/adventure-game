@@ -1,4 +1,4 @@
-import rooms from './rooms';
+import rooms from '../data/rooms';
 import monsterMethods from './monsterMethods';
 import itemMethods from './itemMethods';
 import weaponMethods from './weaponMethods';

@@ -1,5 +1,5 @@
 import itemMethods from '../src/models/itemMethods';
-import items from '../src/models/items';
+import items from '../src/data/items';
 
 import chai from 'chai';
 
