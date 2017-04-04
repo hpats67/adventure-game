@@ -65,12 +65,12 @@ describe.only('the characterController', () => {
     assert.equal($scope.$parent.characterHealth, 100);
   });
 
-//works but causes other tests to fail because it affects global scope and I am uncertain how to reset scope before gamecontroller test.
-  // it('sends dead monster to graveyard', () => {
-  //   let goodWeapon = {type: 'weapon', name: 'right', description: 'weapon', value: 0};
-  //   $controller('characterController', {$scope});
-  //   $scope.useInv(goodWeapon, room);
-  //   assert.deepEqual($scope.$parent.graveyard, [useMonster]);
-  // });
+// works but causes other tests to fail because it affects global scope and I am uncertain how to reset scope before gamecontroller test.
+  it('sends dead monster to graveyard', () => {
+    let goodWeapon = {type: 'weapon', name: 'right', description: 'weapon', value: 0};
+    $controller('characterController', {$scope});
+    $scope.useInv(goodWeapon, room);
+    assert.deepEqual($scope.$parent.graveyard, [useMonster]);
+  });
 
 });
