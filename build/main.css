@@ -13,13 +13,13 @@ table td {
 button {
   min-height: 75px;
   min-width: 75px;
-  background: url(/images/door1.png) no-repeat;
+  background: url(./images/door1.png) no-repeat;
   background-size: 100%;
   border: none;
 }
 
 html {
-  background: url(/images/background.jpg) center no-repeat;
+  background: url(./images/background.jpg) center no-repeat;
   background-size: 100%;
   background-color: #2B303F;
 }
@@ -47,7 +47,7 @@ body {
   width: 30rem;
   height: 30rem;
   text-align: center;
-  background: url(/images/room.jpg) no-repeat;
+  background: url(./images/room.jpg) no-repeat;
   background-size: 100%;
 }
 
@@ -98,7 +98,7 @@ button h1 {
   min-width: 100px;
   max-width: 100px;
   min-height: 100px;
-  background: url(/images/invImage.png) no-repeat;
+  background: url(./images/invImage.png) no-repeat;
   background-size: 100%;
   text-align: center;
   display: inline-block;
@@ -113,12 +113,12 @@ button h1 {
 }
 
 #monster-id {
-  background: url(/images/monsterImage.png) no-repeat;
+  background: url(./images/monsterImage.png) no-repeat;
   background-size: 100%;
 }
 
 .inv-area {
-  background: url(/images/invImage.png) no-repeat;
+  background: url(./images/invImage.png) no-repeat;
   background-size: 100%;
   min-width: 80px;
   max-width: 80px;
@@ -163,7 +163,7 @@ button h1 {
 }
 
 .grave {
-  background: url(/images/grave.png) no-repeat;
+  background: url(./images/grave.png) no-repeat;
   background-size: 100%;
   min-width: 100px;
   max-width: 100px;
