@@ -45,6 +45,9 @@
     "Webpack",
     "Game"
   ],
+  "engines": {
+    "node": "6.9.1"
+  },
   "author": "Gloria Anholt <gloriaanholt@gmail.com>, Steven Jackson <hpats67@gmail.com>, Tim Combs <tim00combs@gmail.com>",
   "license": "CC-BY-NC-4.0",
   "bugs": {
