@@ -1,8 +1,9 @@
+/* globals chai */
+
 import weaponMethods from '../src/models/weaponMethods';
 import weapons from '../src/data/weapons';
 
-import chai from 'chai';
-const assert = chai.assert;
+const { assert } = chai;
 
 describe('the get weapon method', () => {
 
